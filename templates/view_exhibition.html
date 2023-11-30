@@ -1,0 +1,535 @@
+{% load static %}
+
+<html>
+
+<head>
+	<title>View Exhibition</title>
+	<!-- ViewPort -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="{% static 'images/sav2-01.png'%} " rel="icon">
+	<link href="{% static 'images/sav2-01.png'%} " rel="apple-touch-icon">
+
+	<link href="{% static 'css/bootstrap.css'%} " rel="stylesheet">
+
+	<!-- JQUERY -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<!-- POPPER_JS -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+	<!-- Bootstrap -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+	<!-- Fontawesome -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/font-awesome.min.css">
+	<link href="{% static 'css/revolution-slider.css'%} " rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+	<!-- Responsive -->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	<link href="{% static 'css/responsive.css'%} " rel="stylesheet">
+
+	<link rel="stylesheet" type="text/css" href="{% static 'css/style.css'%}">
+
+	<link rel="stylesheet" type="text/css" href="{% static 'css/style1.css'%}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/style2.css'%}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/rotate.css'%}">
+
+	<!-- Local CSS -->
+
+	<link rel="stylesheet" type="text/css" href="{% static 'css/exhibition.css'%}">
+	
+
+</head>
+<style>
+	.clearfix:before,
+	.row:before {
+		display: none;
+	}
+
+	.col-lg-3 {
+		float: none;
+	}
+
+	.img-container {
+
+		width: 100%;
+		height: 100%;
+		position: relative;
+		background: linear-gradient(#000000, #434343);
+		background-size: cover;
+	}
+
+	.md-2 {
+		background: linear-gradient(to left, #000, #000 50%, #eee 75%, #000 75%);
+		padding-top: 5%;
+		padding-right: 3%;
+	}
+
+	.btn-e {
+		background-color: #d9ba85;
+		border-color: #d9ba85;
+	}
+
+	.btn-e:hover {
+		background-color: #d9ba85;
+		border-color: #d9ba85;
+	}
+
+	@media (max-width: 991px) {
+		.img-container {
+			width: 100%;
+			height: 100%;
+			position: relative;
+		}
+
+		.md-2 {
+			padding-top: 1%;
+			padding-left: 5%;
+			padding-right: 5%;
+		}
+	}
+
+	.card {
+		background-color: rgba(240, 242, 245, 1);
+		height: 180px;
+		width: 100%;
+	}
+
+	.card-product:after {
+		content: "";
+		display: table;
+		clear: both;
+		visibility: hidden;
+	}
+
+	.card-product .price-new,
+	.card-product .price {
+
+		margin-right: 5px;
+	}
+
+	.card-product .img-wrap {
+		border-radius: 3px 3px 0 0;
+		overflow: hidden;
+		position: relative;
+		height: 150px;
+		text-align: center;
+		display: table-cell;
+		vertical-align: middle;
+
+	}
+
+	.card-product .img-wrap img {
+		max-width: 100%;
+		max-height: 100%;
+		object-fit: cover;
+		background-color: rgba(240, 242, 245, 1);
+		width: 100%;
+
+	}
+
+	.card-prduct .info-wrap {
+		overflow: hidden;
+		padding: 20px 0;
+		border-top: 1px solid #eee;
+		background-color: rgba(240, 242, 245, 1);
+
+	}
+
+	.card-product .action-wrap {
+		padding-top: 4px;
+		margin-top: 4px;
+	}
+
+	.card-prduct .bottom-wrap {
+		padding: 15px;
+		border-top: 1px solid #eee;
+	}
+
+	.card-prduct .title {
+		margin-top: 0px;
+		text-align: center;
+		font-family: 'Hind Madurai', sans-serif;
+		font-size: 20px;
+	}
+
+	.padding {
+		padding-top: 5%;
+	}
+
+
+	.card {
+		width: 90%;
+		max-width: 450px;
+		background-color: #2B2B2B;
+		padding: 0 2rem 1.5rem 2rem;
+		border-radius: 10px;
+		transition: box-shadow .3s linear;
+		margin-bottom: 15%;
+	}
+
+	.card:hover {
+		box-shadow: 0 0 35px rgba(0, 0, 0, .3);
+	}
+
+	.card .card-img {
+		border-radius: 10px;
+		overflow: hidden;
+		box-shadow: 0 0 25px rgba(0, 0, 0, .3);
+		transform: translateY(-15%);
+		transition: box-shadow .3s linear;
+		background-color: rgba(178, 177, 185, 0.6);
+	}
+
+	.card:hover .card-img {
+		box-shadow: none;
+	}
+
+	.card .card-img img {
+		width: 100%;
+		display: block;
+	}
+
+	.card .card-content {
+		text-align: center;
+		background-color: #121212;
+		border-radius: 1em;
+	}
+
+	.card .card-content .big-title {
+		color: #333;
+		font-size: 1.3rem;
+		font-family: 'Lobster', cursive;
+	}
+
+	.card .card-content .big-title a {
+		font-family: 'Permanent Marker', cursive;
+	}
+
+	.card .card-content .medium-title {
+		color: #999;
+		font-size: .85rem;
+		margin-top: .3rem;
+	}
+
+	/* Flower 1 */
+	.flower1 {
+		display: inline-block;
+		width: 100%;
+		height: 100vh;
+		position: absolute;
+		left: 0;
+		align-items: center !important;
+		justify-content: center;
+		position: absolute;
+		left: 50%;
+		top: 30%;
+		margin-right: -50%;
+		transform: translate(-50%, -50%);
+	}
+
+	.flower1 span {
+		position: absolute;
+		width: 150px;
+		height: 100%;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%) rotate(-90deg);
+		content: '';
+		transition: 1.6s ease-in-out;
+		transform-origin: bottom center;
+		background: #000;
+		border-radius: 100% 100%;
+		background: rgba(255, 255, 255, .15);
+	}
+	.soon{
+			margin-left: auto;
+margin-right: auto;
+background: rgba(255,255,255,0.5);
+font-weight: 600;
+font-size: 4rem;
+padding-left: 1rem;
+padding-right: 1rem;
+border-radius: 3rem;
+}
+@media (max-width: 991px) {
+	.soon{
+		font-size: 2.5rem;
+	}
+	.main-header .header-upper .logo img {
+	margin-top: 2rem;
+	}
+	.main-menu {
+	float: none;
+	}
+}
+</style>
+
+<body>
+	<div class="cursor"></div>
+
+
+	<!-- Preloader -->
+	<div class="preloader"></div>
+
+	<!-- Main Header -->
+	<header class="main-header">
+    	<div class="top-bar">
+        	<div class="top-container">
+            	<!--Info Outer-->
+                 <div class="info-outer">
+                 	<!--Info Box-->
+                    <ul class="info-box clearfix">
+                    	<li><span class="icon flaticon-interface"></span><a href="#">info@savthearth.org</a></li>
+                    	<li><span class="icon flaticon-technology-5"></span><a href="#">+91 11 42331348</a></li>
+                        <li class="social-links-one">
+                          <a target="_blank" href="https://instagram.com/savthearth?igshid=YmMyMTA2M2Y=" class="twitter img-circle"><span class="fa fa-instagram"></span></a>
+                          <a target="_blank" href="https://www.facebook.com/SAVTHEARTH-102337845841095" class="facebook img-circle"><span class="fa fa-facebook-f"></span></a>
+
+                            <a target="_blank" href="https://www.linkedin.com/company/savthearth/about/?viewAsMember=true" class="linkedin img-circle"><span class="fa fa-linkedin"></span></a>
+                        </li>
+                    </ul>
+                 </div>
+            </div>
+        </div>
+    	<!-- Header Upper -->
+    	<div class="header-upper">
+        	<div class="auto-container clearfix">
+            	<!-- Logo -->
+                <div class="logo">
+                    <a href="{% url 'home' %}"><img src="{% static 'images/logo_1.jpg'%} " alt="Greenture"></a>
+                 </div>
+
+                 <!--Nav Outer-->
+                <div class="nav-outer clearfix">
+
+                    <!-- <a href="#" class="theme-btn btn-donate" data-toggle="modal" data-target="#donate-popup">Donate Now!</a> -->
+
+                    <!-- Main Menu -->
+                    <nav class="main-menu">
+
+                        <div class="navbar-header">
+                            <!-- Toggle Button -->
+                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                        </div>
+
+                        <div class="navbar-collapse collapse clearfix">
+                            <ul class="navigation">
+                                {% if user.is_authenticated %}
+
+                                {%else%}
+                                <li class="dropdown"><a href="#"><span>Login</span> <i class="fa fa-user-circle"></i></a>
+                                    <ul>
+                                              <li><a href="{% url 'App_Login:login_attempt' %}">Student Login</a></li>
+                                              <li><a href="{% url 'App_Login:login_school' %}">School Login</a></li>
+                                    </ul>
+                                    </li>
+                                {% endif %}
+                                <li><a href="{% url 'home'%}">Home</a></li>
+                                <li ><a href="{% url 'auditorium'%}">Auditorium</a></li>
+
+                                {% if user.school_profile %}
+                                <li class="dropdown"><a href="#"><span>Exhibition</span> <i class="fa fa-arrow-circle-down"></i></a>
+  					                       <ul>
+  						                        <li><a href="{% url 'add_exhibition'%}">Add Exhibition</a></li>
+  						                        <li><a href="{% url 'view_exhibition'%}">View Exhibition</a></li>
+  					                       </ul>
+  				                      </li>
+                                {% else %}
+                                <li><a href="{% url 'view_exhibition'%}">Exhibition</a></li>
+                                {% endif %}
+
+
+
+
+                                <li class="dropdown"><a href="#">Resource Centre</a>
+                                    <ul>
+                                        <li><a href="{% url 'aboutus'%}">About Us</a></li>
+                                        <li><a href="{% url 'services'%}">Services</a></li>
+                                        <li ><a href="{% url 'manual'%}">Manual</a></li>
+                                        <li><a href="{% url 'team'%}">Our Team</a></li>
+                                        <li><a href="{% url 'faqs'%}">FAQs </a></li>
+                                        <li ><a href="{% url 'blogs'%}">Blogs</a></li>
+
+                                    </ul>
+                                </li>
+
+
+                                <li class="dropdown"><a href="#"><span>Assignments</span> <i class="fa fa-user-circle"></i></a>
+                      <ul>
+                                <li><a href="{% url 'assignment' %}">Student Assignments</a></li>
+                                <li><a href="{% url 'school_assignment' %}">School Assignments</a></li>
+                      </ul>
+                      </li>
+
+
+
+
+                                {% if user.is_authenticated %}
+                                {% if user.profile %}
+                                <li class="dropdown"><a href="#"><span>User Profile</span> <i class="fa fa-user-circle"></i></a>
+  					<ul>
+
+              <li><a href="{% url 'instructions'%}">Online Quiz</a></li>
+              <li><a href="{% url 'task1'%}">Task 1</a></li>
+              <li><a href="{% url 'task2'%}">Task 2</a></li>
+              <li><a href="{% url 'certificate'%}">Certificate</a></li>
+  						
+  					</ul>
+  				</li>
+                  <li><a href="{% url 'App_Login:logout'%}">Logout</a></li>
+          {% else %}
+          <li><a href="{% url 'App_Login:logout'%}">Logout</a></li>
+          {% endif %}
+          {% if user.profile%}
+          {% if user.profile.is_qualified %}
+          <li><button style="color: black;
+background-color: #6ac610;
+padding: 0.5rem 0.5rem;
+font-size: 0.8rem;
+cursor:default;
+border-radius: 10px;" type="button" name="button">Level 1 <i class="fa fa-thumbs-up"></i></button></li>
+<li><button style="color: black;
+background-color: #6ac610;
+padding: 0.5rem 0.5rem;
+font-size: 0.8rem;
+cursor:default;
+border-radius: 10px; border: 2px solid #000;" id="blink" type="button" name="button"><a style="color:#000;" href="{% url 'assignment'%}">Upgrade to Level 2</a></button></li>
+
+{% else %}
+<li><button style="color: black;
+background-color: #6ac610;
+padding: 0.5rem 0.5rem;
+font-size: 0.8rem;
+cursor:default;
+border-radius: 10px;" type="button" name="button">Level 0 <i class="fa fa-thumbs-up"></i></button></li>
+<li><button style="color: black;
+background-color: #6ac610;
+padding: 0.5rem 0.5rem;
+font-size: 0.8rem;
+cursor:default;
+border-radius: 10px; border: 2px solid #000;" id="blink" type="button" name="button"><a style="color:#000;" href="{% url 'assignment'%}">Upgrade to Level 1</a>  </button></li>
+  {% endif %}
+  {% endif %}
+
+  {% if user.school_profile%}
+  {% if user.school_profile.is_qualified %}
+  <li><button style="color: black;
+background-color: #6ac610;
+padding: 0.5rem 0.5rem;
+font-size: 0.8rem;
+cursor:default;
+border-radius: 10px;" type="button" name="button">Level 1 <i class="fa fa-thumbs-up"></i></button></li>
+<li><button style="color: black;
+background-color: #6ac610;
+padding: 0.5rem 0.5rem;
+font-size: 0.8rem;
+cursor:default;
+border-radius: 10px; border: 2px solid #000;" id="blink" type="button" name="button"><a style="color:#000;" href="{% url 'school_assignment'%}">Upgrade to Level 2</a></button></li>
+
+{% else %}
+<li><button style="color: black;
+background-color: #6ac610;
+padding: 0.5rem 0.5rem;
+font-size: 0.8rem;
+cursor:default;
+border-radius: 10px;" type="button" name="button">Level 0 <i class="fa fa-thumbs-up"></i></button></li>
+<li><button style="color: black;
+background-color: #6ac610;
+padding: 0.5rem 0.5rem;
+font-size: 0.8rem;
+cursor:default;
+border-radius: 10px; border: 2px solid #000;" id="blink" type="button" name="button"><a style="color:#000;" href="{% url 'school_assignment'%}">Upgrade to Level 1</a>  </button></li>
+{% endif %}
+{% endif %}
+
+
+
+
+          {% else %}
+
+          
+<li><a href="{% url 'contact'%}">Contact Us</a></li>
+
+
+
+          {% endif %}
+
+                            </ul>
+                        </div>
+                    </nav><!-- Main Menu End-->
+
+                </div>
+
+            </div>
+        </div><!-- Header Top End -->
+
+    </header><!--End Main Header -->
+	<!--End Main Header -->
+
+	<center>
+
+		<div class="img-container padding">
+
+
+			<div class="container my-5">
+				<div class="flower1">
+					<span></span>
+					<span></span>
+					<span></span>
+					<span></span>
+					<span></span>
+					<span></span>
+					<span></span>
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>
+
+				<div class="row">
+					<h1 class="soon">Exhibitors Will Be Live Soon</h1>
+					{% for exhibition in object_list %}
+					<div class="col-md-3 col-6 col-lg-3">
+						<a href="{% url 'exhibition_details' pk=exhibition.pk %}">
+							<figure class="card card-product">
+								<center>
+									<div class="img-wrap card-img">
+										<img src="/media/{{exhibition.logo1}}">
+									</div>
+								</center>
+								<figcaption class="info-wrap card-content">
+									<h6 class="title big-title"><a href="{% url 'exhibition_details' pk=exhibition.pk %}">{{exhibition.name}}</a></h6>
+									<!-- <div class="action-wrap">
+             <div class="price-wrap h5">
+               <span class="price=-new"> ₹ {{ exhibition.price|floatformat:2 }}</span>
+             </div>
+           </div> -->
+								</figcaption>
+								<figure>
+						</a>
+					</div>
+					{% endfor %}
+				</div>
+
+			</div>
+		</div>
+
+
+	</center>
+
+</body>
+
+</html>
+
+<!-- Main JS -->
+<script src="{% static 'js/rotate.js'%}" type="text/javascript"></script>
+<script src="{% static 'js/script1.js'%} "></script>
+<script src="{% static 'js/script.js' %} "></script>

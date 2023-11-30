@@ -1,0 +1,78 @@
+{% extends 'layouts.html' %}
+{% load static %}
+{% block title %}
+Tree Plantation
+{% endblock %}
+{% block style %}
+<link href="{% static 'css/task1.css'%} " rel="stylesheet">
+<style media="screen">
+  .steps{
+    margin:6%;
+  }
+  .steps h4{
+    font-size: 100%;
+font-weight: 500;
+color: black;
+line-height: 180%;
+  }
+  .padding{
+    padding: 6% 0;
+  }
+</style>
+{% endblock %}
+
+{% block content %}
+<section class="assignment">
+  {% if messages %}
+
+            {% for message in messages %}
+            <div class="alert alert-info">
+                {{ message }}
+            </div>
+            {% endfor %}
+
+        {% endif %}
+  <div class="container">
+  <div class="row">
+    <div class="col-md-4">
+      <div class="task">
+        <div class="padding">
+          <h2>Steps To Be Followed:</h2>
+          <div class="steps">
+            <h4>1. Plant a sapling </h4>
+            <h4>2. Click the pictures of plant.</h4>
+            <h4>3. Upload the pictures in every month.(Total 3 pictures)</h4>
+            <h4>4. It should be action pictures.</h4>
+            <h4>5. Growth should be visible in all three pictures. </h4>
+          </div>
+        </div>
+
+
+
+
+      </div>
+
+    </div>
+    <div class="col-md-8">
+
+      <form class="form" action="" method="post" enctype="multipart/form-data">
+      <div class="form-inner">
+        <h2>Upload Image  <i class="fa fa-upload"></i></h2>
+        {% csrf_token %}
+        {{form.as_p}}
+        <div class="btn-group">
+          <input type="submit" class="btn1 btn btn--primary" value="Upload">
+        </div>
+      </div>
+    </form>
+
+    </div>
+  </div>
+  </div>
+
+</section>
+
+{% endblock %}
+{% block js %}
+
+{% endblock %}

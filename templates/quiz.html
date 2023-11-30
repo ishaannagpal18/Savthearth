@@ -1,0 +1,76 @@
+
+{% load static %}
+<html>
+<head>
+  <title>Quiz</title>
+  <style>
+    #questions{
+      font-size: 1.8rem;
+    }
+    ul{
+      font-size:1.5rem;
+    }
+    @media (max-width: 500px){
+    .quiz-container {
+      width: 100%;
+    }
+  }
+  </style>
+</head>
+<link href="{% static 'images/sav2-01.png'%} " rel="icon">
+<link href="{% static 'images/sav2-01.png'%} " rel="apple-touch-icon">
+<link href="{% static 'css/quiz.css'%} " rel="stylesheet">
+<link href="{% static 'css/cam.css'%} " rel="stylesheet">
+<link href="{% static 'css/style1.css'%} " rel="stylesheet">
+<body>
+<div class="padding">
+  <p id="p">{% if user.profile.student_class == "First"%}First{% elif user.profile.student_class == "Second"%}Second{% elif user.profile.student_class == "Third"%}Third{% elif user.profile.student_class == "Fourth"%}Fourth{% elif user.profile.student_class == "Fifth"%}Fifth{% elif user.profile.student_class == "Sixth"%}Sixth{% elif user.profile.student_class == "Seventh"%}Seventh{% elif user.profile.student_class == "Eigth"%}Eigth{% elif user.profile.student_class == "Ninth"%}Ninth{% elif user.profile.student_class == "Tenth"%}Tenth{% elif user.profile.student_class == "Eleventh"%}Eleventh{% elif user.profile.student_class == "Twelfth"%}Twelfth{% endif %}</p>
+  <p id="p1">{{user.profile.test_attempted}}</p>
+  <p id="p2">{{user.profile.score}}</p>
+
+  <article class="clock" id="model3">
+  <h3></h3>
+
+  <div class="count">
+    <div id="timer"></div>
+  </div>
+</article>
+
+
+
+  <section id="quiz1">
+    <canvas style="display:none" id="mega-canvas"></canvas>
+
+		<!-- Video OUTPUT -->
+		<video id="video-stream" playsinline autoplay></video>
+
+
+  <div class="quiz-container" id="quiz">
+          <div class="quiz-header">
+              <h2 id="questions">questions</h2>
+              <ul>
+                  <li>
+                      <input type="radio" name="answer" class="answer" id="a"><label for="a" id="a_text">a</label></input>
+                  </li>
+                  <li>
+                      <input type="radio" name="answer" class="answer" id="b"><label for="b" id="b_text">b</label></input>
+                  </li>
+                  <li>
+                      <input type="radio" name="answer" class="answer" id="c"><label for="c" id="c_text">c</label></input>
+                  </li>
+                  <li>
+                      <input type="radio" name="answer" class="answer" id="d"><label for="d" id="d_text">d</label></input>
+                  </li>
+              </ul>
+          </div>
+          <button type="button" id="button">Next</button>
+          {% csrf_token %}
+      </div>
+  </section>
+
+</div>
+<script src="{% static 'js/cam.js' %} "></script>
+<script src="{% static 'js/quiz.js' %} "></script>
+
+</body>
+</html>

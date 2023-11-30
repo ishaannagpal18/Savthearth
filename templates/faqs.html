@@ -1,0 +1,102 @@
+{% extends 'layouts.html' %}
+{% load static %}
+{% block title %}
+FAQs
+{% endblock %}
+
+{% block content %}
+<!--Page Title-->
+<section class="page-title" style="background-image:url(/static/images/background/bg.jpeg);">
+  <div class="auto-container">
+      <div class="sec-title">
+            <h1>FAQ</h1>
+            <div class="bread-crumb"><a href="{% url 'home'%}">Home</a> / <a href="#">Pages</a> / <a href="#" class="current">FAQs</a></div>
+        </div>
+    </div>
+</section>
+
+
+<!--404 Section-->
+<section class="faqs-section">
+  <div class="auto-container">
+      <div class="sec-title text-center small-container padd-bott-30">
+          <h3 class="bigger-text">Frequently Asked Questions</h3>
+            <div class="text">Does your query fall under any of the following categories? If not, please contact us.</div>
+        </div>
+
+      <div class="row clearfix">
+
+            <div class="col-md-6 col-sm-12 col-xs-12">
+
+                <!--Accordion Box-->
+                <div class="accordion-box">
+                    <!-- Accordion -->
+                    <div class="accordion accordion-block">
+                        <div class="accord-btn"><h4>Can a child appear for the olympiad sitting at home?</h4></div>
+                        <div class="accord-content">
+                            <p>Yes, any student can appear for the test individually from anywhere. </p>
+                        </div>
+                    </div>
+                    <!-- Accordion -->
+                    <div class="accordion accordion-block">
+                        <div class="accord-btn"><h4>How can we get our school students to compete in the Olympiad?</h4></div>
+                        <div class="accord-content">
+                            <p>You can drop an email to info@savthearth.org with your school details and our team will get in touch with you. </p>
+                        </div>
+                    </div>
+                    <!-- Accordion -->
+                    <div class="accordion accordion-block">
+                        <div class="accord-btn"><h4>Do we receive a certificate of participation or achievement?</h4></div>
+                        <div class="accord-content">
+                            <p>After the completion of the test, you will get a participation certificate which you can download on the spot. </p>
+                        </div>
+                    </div>
+                    <!-- Accordion -->
+                    <div class="accordion accordion-block">
+                        <div class="accord-btn"><h4>Is it a one-time olympiad?</h4></div>
+                        <div class="accord-content">
+                            <p>We have olympiads and activities on different levels for different age groups. </p>
+                        </div>
+                    </div>
+                    <!-- Accordion -->
+
+                </div>
+
+            </div>
+
+            <div class="col-md-6 col-sm-12 col-xs-12">
+
+                <!--Accordion Box-->
+                <div class="accordion-box">
+                    <!-- Accordion -->
+
+                    <div class="accordion accordion-block">
+                        <div class="accord-btn"><h4>Is a laptop required to participate in the online olympiad?</h4></div>
+                        <div class="accord-content">
+                            <p>No, you can give it from any device.</p>
+                        </div>
+                    </div>
+                    <!-- Accordion -->
+                    <div class="accordion accordion-block">
+                        <div class="accord-btn"><h4>Do you also organise community social service projects? </h4></div>
+                        <div class="accord-content">
+                            <p>Yes. We also help corporates to strategize sustainable environment-friendly projects. </p>
+                        </div>
+                    </div>
+                    <!-- Accordion -->
+                    <div class="accordion accordion-block">
+                        <div class="accord-btn"><h4>Is there a minimum number of students required to hold an offline exam at a school? </h4></div>
+                        <div class="accord-content">
+                            <p>Yes, there should be a minimum participation of 100 students. </p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </div>
+  </div>
+</section>
+{% endblock %}

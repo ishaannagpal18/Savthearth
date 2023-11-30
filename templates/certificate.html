@@ -1,0 +1,146 @@
+{% extends "layouts.html"%}
+{% load static %}
+{% load crispy_forms_tags %}
+{% block title %}
+Certificate
+{% endblock %}
+{% block style %}
+<link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
+<style >
+
+
+  .cert {
+    background-color: #eee;
+    height: 50vh;
+    display: grid;
+    place-items: center;
+    text-align: center;
+  }
+
+  .cert {
+    gap: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .cert h2{
+    font-family: 'Abril Fatface', cursive;
+    font-size:4rem;
+  }
+
+
+
+  #restart-btn {
+    background-color: #6ac610;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: black;
+    padding: 15px 30px;
+    border-radius: 12px;
+    border: none;
+    box-shadow: 0px 2px 4px rgba(0,0,0,.45);
+    opacity: .85;
+  }
+
+  #restart-btn:hover {
+    opacity: 1;
+    box-shadow: 0px 4px 8px rgba(0,0,0,.25);
+    cursor: pointer;
+  }
+
+  #restart-btn:active {
+    box-shadow: 0px 1px 2px rgba(0,0,0,.65);
+  }
+
+  .container{
+    width:80%;
+  }
+  .button{
+  	display: flex;
+  	place-items: center;
+  	justify-content: center;
+  	height: 100%;
+  }
+  .button button{
+  	box-shadow: 0 0 30px #000;
+  	width: 200px;
+  	height: 50px;
+  	border-radius: 30px;
+  	border: 0;
+  	background: linear-gradient(147deg, #434343 0%, #121212 74%);;
+  	font-weight: bold;
+  	color: rgb(106,198,16);
+  	font-size: 1.5em;
+  	font-family: hubballi;
+  	border: 2px solid rgb(106,198,16);
+    margin-bottom: 2%;
+  }
+  @keyframes hover{
+  	0%{}
+  	25%{border-right: 150px solid rgb(106,198,16);
+  		border-left: 150px solid rgb(106,198,16);
+  		color: black;
+  		padding: 0;
+  	border-radius: 0px;}
+  	50%{
+  		border: 2px solid rgb(106,198,16);
+  	}
+  	75%{
+  		border-top: 30px solid rgb(106,198,16);
+  		border-bottom: 30px solid rgb(106,198,16);
+  		padding: 0;
+  		display: flex;
+  		place-items: center;
+  		border-radius: 0;
+  	}
+  }
+  .button button:hover{
+  	animation-name: hover;
+  	animation-duration: 0.8s;
+  }
+
+  @media screen and (max-width:550px){
+    canvas{
+      display:none;
+    }
+    .cert h2{
+      font-size:2rem;
+    }
+    #restart-btn{
+      padding: 10px 20px;
+    }
+  }
+
+</style>
+{% endblock %}
+{% block content %}
+{% if user.profile.is_qualified %}
+<div style="padding-top:2%" class="padding">
+<p style="position:absolute; visibility:hidden" id="p">{{user.profile.fullname}}</p>
+<center>
+<div class="container">
+        <u><b><h1 style="font-weight:600" class="inst-h1">{{user.profile.fullname}}'s Certificate</h1></b></u>
+        <div class="button">
+          <button type="button" name="button"><a href="#" id="download-btn">Download</a></button>
+        </div>
+
+        <canvas id="canvas" height="960px" width="678.75px"></canvas>
+    </div>
+{%else%}
+<div class="cert">
+
+    <h2>Complete all your tasks to get certificate</h2>
+
+  <button id="restart-btn"><a style="color:#121212; font-size:1.3rem" href="{% url 'assignment'%}">Tasks</a> </button>
+</div>
+</div>
+
+{% endif %}
+
+{% endblock %}
+
+{% block js %}
+<script src="{% static 'js/certificate.js' %} "></script>
+
+{% endblock %}

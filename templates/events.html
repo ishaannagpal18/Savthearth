@@ -1,0 +1,204 @@
+{% extends 'layouts.html' %}
+{% load static %}
+{% block title %}
+Events
+{% endblock %}
+
+{% block content %}
+
+<!--Page Title-->
+<section class="page-title" style="background-image:url(/static/images/background/page-title-bg.jpg);">
+  <div class="auto-container">
+      <div class="sec-title">
+            <h1>Events</h1>
+            <div class="bread-crumb"><a href="{% url 'home'%}">Home</a> / <a href="#" class="current">Events</a></div>
+        </div>
+    </div>
+</section>
+
+
+<!--Events Section-->
+<section class="events-section latest-events">
+  <div class="auto-container">
+
+        <!--Filters Section-->
+        <div class="filters-section">
+          <div class="filter-form">
+              <form method="post" action="index.html">
+                  <div class="row clearfix">
+                      <div class="form-group col-md-5 col-sm-5 col-xs-12">
+                          <div class="field-label">Event From</div>
+                            <input type="text" name="date" class="datepicker" value="" placeholder="Date">
+                        </div>
+                        <div class="form-group col-md-5 col-sm-5 col-xs-12">
+                          <div class="field-label">Search</div>
+                            <input type="text" name="keyword" value="" placeholder="Keyword">
+                        </div>
+                        <div class="form-group col-md-2 col-sm-2 col-xs-12">
+                          <div class="field-label">&nbsp;</div>
+                            <button type="button" class="theme-btn btn-style-two">Find Events</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+      <div class="row clearfix">
+
+            <!--Featured Column-->
+            <div class="column default-featured-column style-two col-lg-4 col-md-6 col-sm-6 col-xs-12">
+              <article class="inner-box">
+                <figure class="image-box">
+                      <a href="#"><img src="{% static 'images/resource/featured-image-24.jpg'%} " alt=""></a>
+                        <div class="post-tag">Featured</div>
+                    </figure>
+                    <div class="content-box">
+                      <h3><a href="#">One Tree Thousand Hope</a></h3>
+                        <div class="column-info">13-14 Feb in Sanfransico, CA</div>
+                        <div class="text">Lorem ipsum dolor sit amet, eu qui modo expeten dis reformidans, ex sit appetere sententiae.. </div>
+                        <a href="#" class="theme-btn btn-style-three">Read More</a>
+                    </div>
+                </article>
+            </div>
+
+            <!--Featured Column-->
+            <div class="column default-featured-column style-two col-lg-4 col-md-6 col-sm-6 col-xs-12">
+              <article class="inner-box">
+                <figure class="image-box">
+                      <a href="#"><img src="{% static 'images/resource/featured-image-25.jpg'%}" alt=""></a>
+                    </figure>
+                    <div class="content-box">
+                      <h3><a href="#">One Tree Thousand Hope</a></h3>
+                        <div class="column-info">13-14 Feb in Sanfransico, CA</div>
+                        <div class="text">Lorem ipsum dolor sit amet, eu qui modo expeten dis reformidans, ex sit appetere sententiae.. </div>
+                        <a href="#" class="theme-btn btn-style-three">Read More</a>
+                    </div>
+                </article>
+            </div>
+
+            <!--Featured Column-->
+            <div class="column default-featured-column style-two col-lg-4 col-md-6 col-sm-6 col-xs-12">
+              <article class="inner-box">
+                <figure class="image-box">
+                      <a href="#"><img src="{% static 'images/resource/featured-image-26.jpg'%}" alt=""></a>
+                    </figure>
+                    <div class="content-box">
+                      <h3><a href="#">One Tree Thousand Hope</a></h3>
+                        <div class="column-info">13-14 Feb in Sanfransico, CA</div>
+                        <div class="text">Lorem ipsum dolor sit amet, eu qui modo expeten dis reformidans, ex sit appetere sententiae.. </div>
+                        <a href="#" class="theme-btn btn-style-three">Read More</a>
+                    </div>
+                </article>
+            </div>
+
+            <!--Featured Column-->
+            <div class="column default-featured-column style-two col-lg-4 col-md-6 col-sm-6 col-xs-12">
+              <article class="inner-box">
+                <figure class="image-box">
+                      <a href="#"><img src="{% static 'images/resource/featured-image-27.jpg'%}" alt=""></a>
+                    </figure>
+                    <div class="content-box">
+                      <h3><a href="#">One Tree Thousand Hope</a></h3>
+                        <div class="column-info">13-14 Feb in Sanfransico, CA</div>
+                        <div class="text">Lorem ipsum dolor sit amet, eu qui modo expeten dis reformidans, ex sit appetere sententiae.. </div>
+                        <a href="#" class="theme-btn btn-style-three">Read More</a>
+                    </div>
+                </article>
+            </div>
+
+            <!--Featured Column-->
+            <div class="column default-featured-column style-two col-lg-4 col-md-6 col-sm-6 col-xs-12">
+              <article class="inner-box">
+                <figure class="image-box">
+                      <a href="#"><img src="{% static 'images/resource/featured-image-28.jpg'%}" alt=""></a>
+                    </figure>
+                    <div class="content-box">
+                      <h3><a href="#">One Tree Thousand Hope</a></h3>
+                        <div class="column-info">13-14 Feb in Sanfransico, CA</div>
+                        <div class="text">Lorem ipsum dolor sit amet, eu qui modo expeten dis reformidans, ex sit appetere sententiae.. </div>
+                        <a href="#" class="theme-btn btn-style-three">Read More</a>
+                    </div>
+                </article>
+            </div>
+
+            <!--Featured Column-->
+            <div class="column default-featured-column style-two col-lg-4 col-md-6 col-sm-6 col-xs-12">
+              <article class="inner-box">
+                <figure class="image-box">
+                      <a href="#"><img src="{% static 'images/resource/featured-image-29.jpg'%}" alt=""></a>
+                    </figure>
+                    <div class="content-box">
+                      <h3><a href="#">One Tree Thousand Hope</a></h3>
+                        <div class="column-info">13-14 Feb in Sanfransico, CA</div>
+                        <div class="text">Lorem ipsum dolor sit amet, eu qui modo expeten dis reformidans, ex sit appetere sententiae.. </div>
+                        <a href="#" class="theme-btn btn-style-three">Read More</a>
+                    </div>
+                </article>
+            </div>
+
+            <!--Featured Column-->
+            <div class="column default-featured-column style-two col-lg-4 col-md-6 col-sm-6 col-xs-12">
+              <article class="inner-box">
+                <figure class="image-box">
+                      <a href="#"><img src="{% static 'images/resource/featured-image-30.jpg'%}" alt=""></a>
+                    </figure>
+                    <div class="content-box">
+                      <h3><a href="#">One Tree Thousand Hope</a></h3>
+                        <div class="column-info">13-14 Feb in Sanfransico, CA</div>
+                        <div class="text">Lorem ipsum dolor sit amet, eu qui modo expeten dis reformidans, ex sit appetere sententiae.. </div>
+                        <a href="#" class="theme-btn btn-style-three">Read More</a>
+                    </div>
+                </article>
+            </div>
+
+            <!--Featured Column-->
+            <div class="column default-featured-column style-two col-lg-4 col-md-6 col-sm-6 col-xs-12">
+              <article class="inner-box">
+                <figure class="image-box">
+                      <a href="#"><img src="{% static 'images/resource/featured-image-31.jpg'%}" alt=""></a>
+                    </figure>
+                    <div class="content-box">
+                      <h3><a href="#">One Tree Thousand Hope</a></h3>
+                        <div class="column-info">13-14 Feb in Sanfransico, CA</div>
+                        <div class="text">Lorem ipsum dolor sit amet, eu qui modo expeten dis reformidans, ex sit appetere sententiae.. </div>
+                        <a href="#" class="theme-btn btn-style-three">Read More</a>
+                    </div>
+                </article>
+            </div>
+
+            <!--Featured Column-->
+            <div class="column default-featured-column style-two col-lg-4 col-md-6 col-sm-6 col-xs-12">
+              <article class="inner-box">
+                <figure class="image-box">
+                      <a href="#"><img src="{% static 'images/resource/featured-image-32.jpg'%}" alt=""></a>
+                    </figure>
+                    <div class="content-box">
+                      <h3><a href="#">One Tree Thousand Hope</a></h3>
+                        <div class="column-info">13-14 Feb in Sanfransico, CA</div>
+                        <div class="text">Lorem ipsum dolor sit amet, eu qui modo expeten dis reformidans, ex sit appetere sententiae.. </div>
+                        <a href="#" class="theme-btn btn-style-three">Read More</a>
+                    </div>
+                </article>
+            </div>
+
+        </div>
+
+        <!-- Styled Pagination -->
+        <div class="styled-pagination text-center padd-top-20 margin-bott-40">
+            <ul>
+                <li><a class="prev" href="#"><span class="fa fa-angle-left"></span>&ensp;Prev</a></li>
+                <li><a href="#">1</a></li>
+                <li><a href="#" class="active">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a class="next" href="#">Next&ensp;<span class="fa fa-angle-right"></span></a></li>
+            </ul>
+        </div>
+
+    </div>
+</section>
+{% endblock %}
+
+{% block js %}
+<script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+<script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+{% endblock %}

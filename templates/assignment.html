@@ -1,0 +1,130 @@
+{% extends 'layouts.html' %}
+{% load static %}
+{% block title %}
+Assignments
+{% endblock %}
+{% block style %}
+<link href="{% static 'css/assignment.css'%} " rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
+<style media="screen">
+  .cert {
+    background-color: #eee;
+    height: 50vh;
+    display: grid;
+    place-items: center;
+    text-align: center;
+  }
+
+  .cert {
+    gap: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .cert h2{
+    font-family: 'Abril Fatface', cursive;
+    font-size:4rem;
+  }
+  .blink{
+    animation: blinking 1s infinite;
+  }
+</style>
+{% endblock %}
+
+{% block content %}
+
+{% if user.school_profile %}
+<div class="cert">
+
+    <h2>This window is restricted for student access only.</h2>
+
+</div>
+{% else %}
+<section class="page-section" id="about">
+            <div class="container">
+                <div class="text-center">
+                    <h2 class="section-heading text-uppercase">Steps Involved</h2>
+                    <h3 class="section-subheading text-muted">Read the steps carefully and complete according to reach next level</h3>
+                </div>
+                <ul class="timeline">
+                    <li >
+                        <div id="blink1" class="timeline-image"><a style="text-decoration:none; color:#000;"href="{% url 'instructions'%}">     <h4>
+
+                                  Attempt <br> Online
+                                  <br>
+                                  Quiz
+
+                          </h4></a></div>
+                        <div class="timeline-panel">
+                            <div class="timeline-heading">
+                                <h4>Online Quiz</h4>
+                                <h4 class="subheading"></h4>
+                            </div>
+                            <div class="timeline-body"><p class="text-muted">In the first stage of level 1, you have to attempt an olympiad provided with the environment related questions which you have to answer with your environment quotient. </p></div>
+                        </div>
+                    </li>
+                    <li class="timeline-inverted">
+                        <div id="blink2" class="timeline-image"><a style="text-decoration:none; color:#000;"href="{% url 'task1'%}">     <h4>
+
+                                  Attempt <br> Task
+                                  <br>
+                                  1
+
+                          </h4></a></div>
+                        <div class="timeline-panel">
+                            <div class="timeline-heading">
+                                <h4>Tree Plantation</h4>
+                                <h4 class="subheading"></h4>
+                            </div>
+                            <div class="timeline-body"><p class="text-muted">In the first task of level 1, each registered person has to plant a sapling and maintain it for three consecutive months, and during this phase, he or she must upload motion pictures of the growth to the dashboard of their in every 30 days.</p></div>
+                        </div>
+                    </li>
+                    <li>
+                        <div id="blink3" class="timeline-image"><a style="text-decoration:none; color:#000;"href="{% url 'task2'%}">     <h4>
+
+                                  Attempt <br> Task
+                                  <br>
+                                  2
+
+                          </h4></a></div>
+                        <div class="timeline-panel">
+                            <div class="timeline-heading">
+                                <h4>Instagram Story</h4>
+                                <h4 class="subheading"></h4>
+                            </div>
+                            <div class="timeline-body"><p class="text-muted">In the second task of level 1 , every participant of this activity needs to put a story of the plant or your learnings about tree plantation on their Instagram and tag @savtheearth.</p></div>
+                        </div>
+                    </li>
+
+                    <li class="timeline-inverted">
+                        <div id="blink4" class="timeline-image">
+                       <a style="text-decoration:none; color:#000;"href="{% url 'certificate'%}">     <h4>
+                                 Download
+                                 <br>
+                                 Your
+                                <br>
+                                Certificate
+                         </h4></a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+{% endif %}
+
+{% endblock %}
+{% block js %}
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script> 
+<script> 
+    $(document).ready(function () { 
+        if($(window).width() < 500) { 
+           $("#blink1").addClass("blink"); 
+           $("#blink2").addClass("blink"); 
+           $("#blink3").addClass("blink"); 
+           $("#blink4").addClass("blink"); 
+          
+        }     
+    }); 
+</script> 
+{% endblock %}

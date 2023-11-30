@@ -1,0 +1,35 @@
+
+
+#img-canvas{
+	position: absolute;
+left: 9.0%;
+top: 26.3%;
+/* display: none; */
+height: 43.3%;
+width: 51.6%;
+z-index: 9;
+background-color: white;
+}
+
+#video-stream{
+  position: absolute;
+right: 1%;
+bottom: 1%;
+/* display: none; */
+height: 21%;
+width: 23.6%;
+z-index: 9;
+border: 5px solid #121212;
+box-shadow: 3px 3px 10px #ccc;
+background-color: #121212;
+}
+
+
+@media (max-height: 350px){
+
+
+#video-stream {
+	left: 10%;
+	width: 41.6%;
+}
+}

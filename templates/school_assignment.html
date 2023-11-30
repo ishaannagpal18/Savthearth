@@ -1,0 +1,202 @@
+{% extends 'layouts.html' %}
+{% load static %}
+{% block title %}
+Tree Plantation
+{% endblock %}
+{% block style %}
+<link href="{% static 'css/task2.css'%} " rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
+
+<style media="screen">
+  .cert {
+    background-color: #eee;
+    height: 50vh;
+    display: grid;
+    place-items: center;
+    text-align: center;
+  }
+
+  .cert {
+    gap: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .cert h2{
+    font-family: 'Abril Fatface', cursive;
+    font-size:4rem;
+  }
+  .steps{
+    margin:6%;
+  }
+  .steps h4{
+    font-size: 130%;
+font-weight: 500;
+color: black;
+line-height: 180%;
+  }
+  .padding{
+    padding: 6% 0;
+  }
+  .inputs a{
+    color:#405de6;
+  }
+  .form .container{
+    width:100%;
+    overflow-y: auto;
+    height: auto;
+  }
+  input[type='checkbox'] {
+    width: 10%;
+    display: inline-block;
+    height: 20px;
+    filter: hue-rotate(250deg);
+}
+
+.form label {
+width: 85%;
+display: inline-block;
+font-size:1.4rem;
+}
+.form .brand-title {
+font-size: 3rem;
+background: linear-gradient(45deg, #6ac610, #7DCE13, #5BB318, #2B7A0B, #1A4D2E);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+padding-top: 1.5%;
+padding-bottom: 1.5%;
+}
+.form .btn {
+background: linear-gradient(45deg, #6ac610, #7DCE13, #5BB318, #2B7A0B, #1A4D2E);
+}
+.alert{
+  text-align: center;
+font-size: 1.7rem;
+}
+@media only screen and (max-width: 500px) {
+  .form {
+    margin:5%;
+  }
+  .form .brand-title {
+font-size: 2rem;
+
+}
+}
+</style>
+{% endblock %}
+
+{% block content %}
+{% if user.profile %}
+
+<div class="cert">
+
+  <h2>This window is restricted for school access only.</h2>
+
+</div>
+{% else %}
+
+<section class="assignment">
+  {% if messages %}
+
+            {% for message in messages %}
+            <div class="alert alert-info">
+                {{ message }}
+            </div>
+            {% endfor %}
+
+        {% endif %}
+  <div class="container">
+    <div style="position:absolute" class="login-root">
+  <div class="box-root flex-flex flex-direction--column" style="min-height: 100vh;flex-grow: 1;">
+    <div class="loginbackground box-background--white padding-top--64">
+      <div class="loginbackground-gridContainer">
+        <div class="box-root flex-flex" style="grid-area: top / start / 8 / end;">
+          <div class="box-root" style="background-image: linear-gradient(white 0%, rgb(247, 250, 252) 33%); flex-grow: 1;">
+          </div>
+        </div>
+        <div class="box-root flex-flex" style="grid-area: 4 / 2 / auto / 5;">
+          <div class="box-root box-divider--light-all-2 animationLeftRight tans3s" style="flex-grow: 1;"></div>
+        </div>
+        <div class="box-root flex-flex" style="grid-area: 6 / start / auto / 2;">
+          <div class="box-root box-background--blue800" style="flex-grow: 1;"></div>
+        </div>
+        <div class="box-root flex-flex" style="grid-area: 7 / start / auto / 4;">
+          <div class="box-root box-background--blue animationLeftRight" style="flex-grow: 1;"></div>
+        </div>
+        <div class="box-root flex-flex" style="grid-area: 8 / 4 / auto / 6;">
+          <div class="box-root box-background--gray100 animationLeftRight tans3s" style="flex-grow: 1;"></div>
+        </div>
+        <div class="box-root flex-flex" style="grid-area: 2 / 15 / auto / end;">
+          <div class="box-root box-background--cyan200 animationRightLeft tans4s" style="flex-grow: 1;"></div>
+        </div>
+        <div class="box-root flex-flex" style="grid-area: 3 / 14 / auto / end;">
+          <div class="box-root box-background--blue animationRightLeft" style="flex-grow: 1;"></div>
+        </div>
+        <div class="box-root flex-flex" style="grid-area: 4 / 17 / auto / 20;">
+          <div class="box-root box-background--gray100 animationRightLeft tans4s" style="flex-grow: 1;"></div>
+        </div>
+        <div class="box-root flex-flex" style="grid-area: 5 / 14 / auto / 17;">
+          <div class="box-root box-divider--light-all-2 animationRightLeft tans3s" style="flex-grow: 1;"></div>
+        </div>
+      </div>
+    </div>
+
+
+
+    </div>
+  </div>
+  <div class="row">
+    <!-- <div class="col-md-6">
+      <div class="task">
+        <div class="padding">
+          <h2>Steps To Be Followed:</h2>
+          <div class="steps">
+            <h4>1. Make a video of your learnings or any experience you want to share about tree plantation.  </h4>
+            <h4>2. Upload the video on your Instagram story. </h4>
+            <h4>3. Tag #savthearth and @savthearth on your story. </h4>
+            <h4>4. Upload the screenshot here. </h4>
+            <h4>  </h4>
+          </div>
+        </div>
+
+
+
+
+      </div>
+
+    </div> -->
+    <div class="col-md-12">
+      <form class="form" action="" method="post" enctype="multipart/form-data">
+        <div class="container">
+    <!-- <div class="brand-logo"></div> -->
+    <div class="brand-title">SCHOOL ASSIGNMENT</div>
+    <div class="inputs">
+
+
+        {% csrf_token %}
+        {{form.as_p}}
+        <div class="">
+          <input type="submit" class="btn1 btn btn--primary" value="Send For Enquiry">
+        </div>
+
+
+
+    </div>
+
+  </div>
+  </form>
+      </div>
+
+
+  </div>
+    </div>
+
+
+</section>
+{% endif %}
+
+{% endblock %}
+{% block js %}
+
+{% endblock %} 

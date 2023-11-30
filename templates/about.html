@@ -1,0 +1,462 @@
+{% extends 'layouts.html' %}
+{% load static %}
+{% block title %}
+About Us
+{% endblock %}
+
+{% block style %}
+<style>
+.value {
+  font-size: 2rem;
+  display: block;
+  font-weight: 600;
+  color: #000;
+}
+</style>
+{% endblock %}
+
+{% block content %}
+
+<!--Page Title-->
+<section class="page-title" style="background-image:url(/static/images/background/bg.jpeg);">
+  <div class="auto-container">
+      <div class="sec-title">
+            <h1>About Us</h1>
+            <div class="bread-crumb"><a href="{% url 'home'%}">Home</a> / <a href="#" class="current">About Us</a></div>
+        </div>
+    </div>
+</section>
+
+
+<!--Default Section-->
+<section class="default-section">
+  <div class="auto-container">
+      <div class="row clearfix">
+
+            <!--Column-->
+            <div class="column image-column col-md-6 col-sm-12 col-xs-12">
+              <article class="inner-box wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="1500ms">
+                <figure class="image-box video-box">
+                      <img style="height: 60vh; " src="{% static 'images/ab.png'%} " alt="">
+                        <a href="https://www.youtube.com/watch?v=AlHaZtgo1G0&t=1s" class="lightbox-image video-link"><div class="icon-outer"><span class="img-circle fa fa-play"></span></div></a>
+                    </figure>
+                </article>
+            </div>
+
+            <!--Column-->
+            <div class="column default-text-column with-margin col-md-6 col-sm-12 col-xs-12">
+              <article class="inner-box wow fadeInRight" data-wow-delay="0ms" data-wow-duration="1500ms">
+                <h2>National Level Olympiad <span class="theme_color normal-font">SAVTHEARTH</span></h2>
+                    <div class="bigger-text">An initiative to educate and inform our youth about the environment.</div>
+                    <div class="text"><p>Savthearth is about raising awareness among school students about the importance of protecting our planet and taking action. We hope to sensitize our youth to make the aware of the environmental situation.  </p></div>
+                    <ul class="styled-list-one no-margin-bottom">
+                      <li>Online Olympiad</li>
+                        <li>Offline Olympiad </li>
+                        <li>Magazine</li>
+                        <li>CSR Strategizing</li>
+                    </ul>
+                </article>
+            </div>
+
+        </div>
+
+        <div class="row clearfix">
+
+            <!--Column-->
+            <div class="column default-text-column col-md-4 col-sm-6 col-xs-12">
+              <div class="text-block">
+                  <h3>Our Aim</h3>
+                    <div class="text no-margin-bottom">
+                      <p>The main goal of Savthearth has been to provide genuine educational information to youth in order to raise their level of awareness and teach them about the environment from a young age. It has organized several activities to improve the environmental quality of our planet.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!--Column-->
+            <div class="column default-text-column col-md-4 col-sm-6 col-xs-12">
+              <div class="text-block">
+                  <h3>CORE <span class="theme_color">VALUES</span></h3>
+                    <div class="text no-margin-bottom">
+                      <ul style="list-style-type: circle;">
+                        <li><i style="color:#121212" class="fa fa-arrow-right"></i>   Initiative to plant more trees </li>
+                        <li><i style="color:#121212" class="fa fa-arrow-right"></i>   Easy reduction of energy  </li>
+                        <li><i style="color:#121212" class="fa fa-arrow-right"></i>   Recycling the waste </li>
+                        <li><i style="color:#121212" class="fa fa-arrow-right"></i>   Conservation of water  </li>
+                        <li><i style="color:#121212" class="fa fa-arrow-right"></i>   Wise disposal of E-waste</li>
+                      </ul>
+                      <p></p>
+                    </div>
+                </div>
+            </div>
+
+            <!--Column-->
+            <div class="column default-text-column col-md-4 col-sm-6 col-xs-12">
+              <div class="text-block">
+                  <h3>Our Vision</h3>
+                    <div class="text no-margin-bottom">
+                      <p>We want to see a better, healthy and green tomorrow by transforming the future of the global environment. We aim to do so by sustainably and efficiently conserving, developing and utilizing natural resources. </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+
+<!--Two Column Fluid -->
+<section class="two-column-fluid">
+
+
+  <div class="outer clearfix">
+
+
+        <article class="column left-column" style="">
+
+            <div class="content-box pull-right">
+                <h2>Some <span class="normal-font theme_color">Facts</span></h2>
+                <div class="title-text"></div>
+                <div class="text">SAVTHEARTH was founded in Delhi in 2019. In just 9 months, it had expanded to nearly ten cities. We have developed a more comprehensive plan and schedule for schools and their students to follow. They can even obtain various levels of certification. </div>
+                <br>
+
+                <div class="clearfix">
+                  <div class="icon-box">
+                      <div class="icon"><span class="flaticon-building"></span></div>
+                        <div class="lower-box">
+                          <div class="value" akhi="300">0</div>
+                            <span class="title">Schools</span>
+                        </div>
+                    </div>
+
+                    <div class="icon-box">
+                      <div class="icon"><span class="flaticon-tool-4"></span></div>
+                        <div class="lower-box">
+                          <div class="value" akhi="125000">0</div>
+                            <span class="title">Students</span>
+                        </div>
+                    </div>
+
+                    <div class="icon-box">
+                      <div class="icon"><span class="flaticon-construction"></span></div>
+                        <div class="lower-box">
+                          <div class="value" akhi="10">0</div>
+                            <span class="title">Cities</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="clearfix"></div>
+        </article>
+
+        <article class="column right-column" style="">
+
+            <div class="content-box pull-left">
+              <div class="outer-box">
+                  <div class="quote-icon"><span class="fa fa-quote-left"></span></div>
+                    <h2>Word from <span class="normal-font">FOUNDER</span></h2>
+
+                    <!--Text Content-->
+                    <div class="text-content">
+                        <div class="text"><p>The environment is a sensitive topic just like any other social issue. Small changes can bring a very big difference but essentially we will have to bring a change in our lifestyles. We have included schools in the process because any significant change will necessitate the participation of youth.   </p></div>
+                        <div class="information clearfix">
+                            <div class="info">
+                              <figure class="image-thumb"><img src="{% static 'images/resource/kabir1.jpeg'%} " alt=""></figure>
+                              <h3>Kabir Bansal</h3>
+                                <p>Co-Founder</p>
+                            </div>
+                            <!-- <div class="signature"><img src="{% static 'images/anmol.jpeg'%} " alt=""></div> -->
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="clearfix"></div>
+        </article>
+
+    </div>
+
+</section>
+
+
+<section class="team-section">
+    <div class="auto-container">
+
+        <div class="sec-title text-center">
+            <h2>Our <span class="normal-font theme_color">Team</span></h2>
+            <div class="text">The team who has worked on their ideation to establish this organization and give it a defined structure. </div>
+        </div>
+
+        <div style="margin-left: 15%;
+margin-right: 15%;" class="row clearfix">
+          <center>
+
+            <!--Column-->
+            <article class="column team-member col-lg-6 col-md-6 col-sm-6 col-xs-12 wow fadeInUp" data-wow-delay="0ms" data-wow-duration="1500ms">
+                <div class="inner-box">
+                    <figure class="image"><a href="mailto:mail@email.com"><img src="{% static 'images/resource/kabir1.jpeg'%} " alt=""></a></figure>
+                    <div class="member-info">
+                        <h3>Kabir Bansal</h3>
+                        <div class="designation">Co-Founder</div>
+                    </div>
+                    <div class="content">
+                        <div class="text"><p>Kabir Bansal, the director of VRAKSH Management Private Limited, has been in the field of medicine for more than 17 years. He has been actively engaged in several social projects and hopes to be involved in the future as well. </p></div>
+                        <div class="social-links">
+                          <a target="_blank" href="https://www.facebook.com/kamlesh.troikaa"><span class="fa fa-facebook-f"></span></a>
+                          <a target="_blank" href="https://instagram.com/music.by.kabir?igshid=YmMyMTA2M2Y="><span class="fa fa-instagram"></span></a>
+
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <!--Column-->
+            <article class="column team-member col-lg-6 col-md-6 col-sm-6 col-xs-12 wow fadeInUp" data-wow-delay="300ms" data-wow-duration="1500ms">
+                <div class="inner-box">
+                    <figure class="image"><a href="mailto:mail@email.com"><img src="{% static 'images/resource/anmol1.jpeg'%} " alt=""></a></figure>
+                    <div class="member-info">
+                        <h3>Anmol Chawla</h3>
+                        <div class="designation">Co-Founder</div>
+                    </div>
+                    <div class="content">
+                        <div class="text"><p>Anmol Chawla, a young entrepreneur, has been in business for almost 6 years now. He has been an active Rotary Leader for nearly a decade.  </p></div>
+                        <div class="social-links">
+                          <a target="_blank" href="https://www.facebook.com/anmol.c.moli"><span class="fa fa-facebook-f"></span></a>
+                          <a target="_blank" href="https://instagram.com/anmolchawla.official?igshid=YmMyMTA2M2Y="><span class="fa fa-instagram"></span></a>
+
+                          <a target="_blank" href="https://www.linkedin.com/in/anmol-chawla-he-him-556757b8"><span class="fa fa-linkedin"></span></a>
+
+
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+
+        </div>
+
+    </div>
+</section>
+<!--Testimonials-->
+<section class="testimonials-section" style="background-image:url(/static/images/test2.jpg);">
+<div class="auto-container">
+
+        <div class="sec-title text-center">
+            <h2>Testi<span class="normal-font theme_color">Monials</span></h2>
+            <div class="text">Every piece of feedback is critical to us. Here are some genuine responses from our colleagues. </div>
+        </div>
+
+        <!--Slider-->
+      <div class="testimonials-slider testimonials-carousel">
+
+            <!--Slide-->
+            <article class="slide-item">
+
+                <div class="info-box">
+                  <figure class="image-box"><img src="{% static 'images/1.jpeg'%} " alt=""></figure>
+                  <h3>Ranjana Bajaj</h3>
+                    <p class="designation">Principal</p>
+                </div>
+
+                <div class="slide-text">
+                    <p>“Our school is always enlightened to have such kind of tests for our students. This test about the environment was extremely educational. I am sure this action will enhance their awareness.”</p>
+                </div>
+            </article>
+
+            <!--Slide-->
+            <article class="slide-item">
+
+                <div class="info-box">
+                  <figure class="image-box"><img src="{% static 'images/2.jpeg'%}" alt=""></figure>
+                  <h3>Khushi</h3>
+                    <p class="designation">Student</p>
+                </div>
+
+                <div class="slide-text">
+                    <p>“The test was very nice and easy. I was curious when I got to know that the topic of this is “Environment”, I have a keen interest in that topic . Got to learn a lot about our environment by this test.”</p>
+                </div>
+            </article>
+
+            <!--Slide-->
+            <article class="slide-item">
+
+                <div class="info-box">
+                  <figure class="image-box"><img src="{% static 'images/4.jpeg'%}" alt=""></figure>
+                  <h3>Hasan</h3>
+                    <p class="designation">CMS Head office</p>
+                </div>
+
+                <div class="slide-text">
+                    <p>“ It was an effective medium to let students know the importance of our environment and test their knowledge about the environment, I am glad that each student attempted this test very keenly.”</p>
+                </div>
+            </article>
+
+            <!--Slide-->
+            <article class="slide-item">
+
+                <div class="info-box">
+                  <figure class="image-box"><img src="{% static 'images/3.jpeg'%}" alt=""></figure>
+                  <h3>Ishaan</h3>
+                    <p class="designation">Student</p>
+                </div>
+
+                <div class="slide-text">
+                    <p>“This was very unique, usually exams are conducted on subject topics but this one was an informative and interesting topic to attempt a test on. Excitingly looking forward for more such tests.”</p>
+                </div>
+            </article>
+
+            <!--Slide-->
+            <article class="slide-item">
+
+                <div class="info-box">
+                  <figure class="image-box"><img src="{% static 'images/1.jpeg'%}" alt=""></figure>
+                  <h3>Shreya Singh</h3>
+                    <p class="designation">Parent of Khushi</p>
+                </div>
+
+                <div class="slide-text">
+                    <p>“I am glad that my child got the opportunity to appear for this test and got to enhance his knowledge about the environment. I  would definitely encourage my child to appear for more such tests.”</p>
+                </div>
+            </article>
+
+
+        </div>
+
+    </div>
+</section>
+
+
+
+<!--Blog News Section-->
+<section class="blog-news-section latest-news">
+  <div class="auto-container">
+
+        <div class="sec-title text-center">
+            <h2>Latest <span class="normal-font theme_color">News</span></h2>
+            <div class="text">Our Earth is affected by human interference all across the globe. This is what is happening all over the world. </div>
+        </div>
+      <div class="row clearfix">
+
+            <!--News Column-->
+            <div class="column blog-news-column col-lg-4 col-md-6 col-sm-6 col-xs-12">
+              <article class="inner-box wow fadeInUp" data-wow-delay="0ms" data-wow-duration="1500ms">
+                <figure class="image-box">
+                      <a target="_blank" href="https://www.gulftoday.ae/news/2023/02/23/magnitude-7-2-earthquake-strikes-tajikistan-near-border-with-china"><img src="https://akm-img-a-in.tosshub.com/businesstoday/images/story/202302/ezgif-sixteen_nine_295.jpg?size=948:533" alt=""></a>
+                        <div class="news-date">24<span class="month">FEB</span></div>
+                    </figure>
+                    <div class="content-box">
+                      <h3><a target="_blank" href="https://www.gulftoday.ae/news/2023/02/23/magnitude-7-2-earthquake-strikes-tajikistan-near-border-with-china">Magnitude 7.2 earthquake strikes Tajikistan, near border with China</a></h3>
+                      <div class="post-info clearfix">
+                          <div class="post-author"></div>
+                            <div class="post-options clearfix">
+                              <!-- <a href="#" class="comments-count"><span class="icon flaticon-communication-2"></span> 6</a>
+                                <a href="#" class="fav-count"><span class="icon flaticon-favorite-1"></span> 14</a> -->
+                            </div>
+                        </div>
+                        <div class="text">An earthquake of about 7.2 magnitude shook Tajikistan at 8:37am (0037 GMT) on Thursday at a depth of 10 km (6 miles), Chinese state television CCTV reported，citing the China earthquake Networks Center.....
+</div>
+                        <a target="_blank" href="https://www.gulftoday.ae/news/2023/02/23/magnitude-7-2-earthquake-strikes-tajikistan-near-border-with-china" class="theme-btn read-more">Read More</a>
+                    </div>
+                </article>
+            </div>
+
+            <!--News Column-->
+            <div class="column blog-news-column col-lg-4 col-md-6 col-sm-6 col-xs-12">
+              <article class="inner-box wow fadeInUp" data-wow-delay="300ms" data-wow-duration="1500ms">
+                <figure class="image-box">
+                      <a target="_blank" href="https://www.thestatesman.com/world/five-cities-most-vulnerable-to-natural-disasters-1503156928.html"><img src="https://i.natgeofe.com/n/24885774-fa8e-4c01-ac1d-d5f460ed3e81/GettyImages-1242750214_16x9.jpg" alt=""></a>
+                        <div class="news-date">23<span class="month">FEB</span></div>
+                    </figure>
+                    <div class="content-box">
+                      <h3><a target="_blank" href="https://www.thestatesman.com/world/five-cities-most-vulnerable-to-natural-disasters-1503156928.html">Five cities most vulnerable to natural disasters
+</a></h3>
+                      <div class="post-info clearfix">
+                          <div class="post-author"></div>
+                            <div class="post-options clearfix">
+                              <!-- <a href="#" class="comments-count"><span class="icon flaticon-communication-2"></span> 6</a>
+                                <a href="#" class="fav-count"><span class="icon flaticon-favorite-1"></span> 14</a> -->
+                            </div>
+                        </div>
+                        <div class="text">Unfortunately natural calamities are happening more frequently now than ever before. A majority of the cities that are at risk are located in coastal regions, making them more susceptible to earthquakes, tsunamis, and floods....
+</div>
+                        <a target="_blank" href="https://www.thestatesman.com/world/five-cities-most-vulnerable-to-natural-disasters-1503156928.html" class="theme-btn read-more">Read More</a>
+                    </div>
+                </article>
+            </div>
+
+            <!--News Column-->
+            <div class="column blog-news-column col-lg-4 col-md-6 col-sm-6 col-xs-12">
+              <article class="inner-box wow fadeInUp" data-wow-delay="600ms" data-wow-duration="1500ms">
+                <figure class="image-box">
+                      <a target="_blank" href="https://www.thedailystar.net/environment/news/warm-water-eroding-doomsday-glacier-study-shows-3249381"><img src="https://images.ctfassets.net/cnu0m8re1exe/5FcM2B1o4CcSKUL7htFoIh/afcd5fab323daa93b00a2f76782bd6bb/Thwaits_Glacier.jpg" alt=""></a>
+                        <div class="news-date">16<span class="month">FEB</span></div>
+                    </figure>
+                    <div class="content-box">
+                      <h3><a target="_blank" href="https://www.thedailystar.net/environment/news/warm-water-eroding-doomsday-glacier-study-shows-3249381">Warm water eroding 'Doomsday Glacier', study shows</a></h3>
+                      <div class="post-info clearfix">
+                          <div class="post-author"></div>
+                            <div class="post-options clearfix">
+                              <!-- <a href="#" class="comments-count"><span class="icon flaticon-communication-2"></span> 6</a>
+                                <a href="#" class="fav-count"><span class="icon flaticon-favorite-1"></span> 14</a> -->
+                            </div>
+                        </div>
+                        <div class="text">Warm water is seeping into the weak points of Antarctica's giant Thwaites Glacier, exacerbating melting caused by rising temperatures, two papers published in Nature journal showed on Wednesday...</div>
+                        <a target="_blank" href="https://www.thedailystar.net/environment/news/warm-water-eroding-doomsday-glacier-study-shows-3249381" class="theme-btn read-more">Read More</a>
+                    </div>
+                </article>
+            </div>
+
+
+        </div>
+    </div>
+</section>
+
+
+<section class="sponsors-section">
+    <div class="auto-container">
+        <div class="slider-outer">
+            <!--Sponsors Slider-->
+            <ul class="sponsors-slider">
+                <li><a href="#"><img src="{% static 'images/clients/ss1.jpeg'%} " alt=""></a></li>
+                <li><a href="#"><img src="{% static 'images/clients/ss2.jpeg'%}" alt=""></a></li>
+                <li><a href="#"><img src="{% static 'images/clients/ss3.jpeg'%}" alt=""></a></li>
+                <li><a href="#"><img src="{% static 'images/clients/ss4.jpeg'%}" alt=""></a></li>
+                <li><a href="#"><img src="{% static 'images/clients/ss5.jpeg'%}" alt=""></a></li>
+                <li><a href="#"><img src="{% static 'images/clients/ss6.jpeg'%}" alt=""></a></li>
+            </ul>
+        </div>
+
+    </div>
+</section>
+{% endblock %}
+{% block js %}
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script> 
+<script> 
+     const counters = document.querySelectorAll('.value');
+const speed = 1000;
+
+counters.forEach( counter => {
+   const animate = () => {
+      const value = +counter.getAttribute('akhi');
+      const data = +counter.innerText;
+     
+      const time = value / speed;
+     if(data < value) {
+          counter.innerText = Math.ceil(data + time);
+          setTimeout(animate, 1);
+        }else{
+          counter.innerText = value;
+        }
+     
+   }
+   
+   animate();
+});
+
+
+
+
+</script> 
+{% endblock %}

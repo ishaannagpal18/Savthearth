@@ -1,0 +1,128 @@
+{% extends 'layouts.html' %}
+{% load static %}
+{% block title %}
+Contact Us
+{% endblock %}
+{% block style %}
+<style media="screen">
+
+</style>
+{% endblock %}
+
+{% block content %}
+<!--Page Title-->
+<section class="page-title" style="background-image:url(/static/images/background/bg.jpeg);">
+  <div class="auto-container">
+      <div class="sec-title">
+            <h1>Contact <span class="normal-font">Us</span></h1>
+            <div class="bread-crumb"><a href="{% url 'home'%}">Home</a> / <a href="#" class="current">Contact Us</a></div>
+        </div>
+    </div>
+</section>
+
+
+<!--Default Section / Other Info-->
+<section class="default-section other-info">
+  <div class="auto-container">
+
+      <div class="row clearfix">
+
+            <!--Info Column-->
+            <div class="column info-column col-lg-5 col-md-6 col-sm-12 col-xs-12">
+              <article class="inner-box">
+                <h3 class="margin-bott-20">Our Address</h3>
+                    <div class="text margin-bott-40">Our team will be delighted to speak with you about any potential collaboration with our organisation. Please contact us using the information provided below, and we will get back to you within 24 hours.</div>
+                    <ul class="info-box">
+                        <li><span class="icon flaticon-location"></span><strong>Address</strong> E-6, 2nd floor, Kalkaji Main Market-110019</li>
+                        <li><span class="icon flaticon-technology-5"></span><strong>Phone</strong> +91 11 42331348</li>
+                        <li><span class="icon flaticon-interface-1"></span><strong>Email</strong> info@savthearth.org</li>
+                    </ul>
+                </article>
+            </div>
+
+            <!--Image Column-->
+            <div class="column image-column col-lg-7 col-md-6 col-sm-12 col-xs-12">
+              <article class="inner-box">
+                <figure class="image-box"><img src="{% static 'images/contact3.jpg'%} " alt=""></figure>
+                </article>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!--Contact Section-->
+<section class="contact-section no-padd-top">
+  <div class="auto-container">
+
+      <div class="row clearfix">
+
+            <!--Map Column-->
+            <div class="column map-column col-lg-5 col-md-6 col-sm-12 col-xs-12">
+              <h2>Our Location on Map</h2>
+
+              <article class="inner-box">
+                <!--Map Container-->
+                    <div class="map-container">
+                      <iframe class="map-canvas" src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d14019.118317684613!2d77.2519989!3d28.5463443!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1655815822907!5m2!1sen!2sin"  height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+                        <!--Map Canvas-->
+                        <!-- <div class="map-canvas"
+                            data-zoom="12"
+                            data-lat="-37.817085"
+                            data-lng="144.955631"
+                            data-type="roadmap"
+                            data-hue="#ffc400"
+                            data-title="Envato"
+                            data-content="Melbourne VIC 3000, Australia<br><a href='mailto:info@youremail.com'>info@youremail.com</a>"
+                            style="height: 380px;">
+                        </div> -->
+
+                    </div>
+                </article>
+            </div>
+
+            <!--Form Column-->
+            <div class="column form-column col-lg-7 col-md-6 col-sm-12 col-xs-12">
+              <h2>Send Message</h2>
+              {% if messages %}
+
+          {% for message in messages %}
+          <div class="alert alert-info">
+              {{ message }}
+          </div>
+          {% endfor %}
+
+      {% endif %}
+              <!--COntact Form-->
+              <div class="inner-box contact-form">
+                <form action="" method="POST" >
+
+        {% csrf_token %}
+        <div class="row">
+          <div class="col-md-6 form-group">
+            <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
+          </div>
+          <div class="col-md-6 form-group mt-3 mt-md-0">
+            <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
+          </div>
+        </div>
+        <div class="form-group mt-3">
+          <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
+        </div>
+        <div class="form-group mt-3">
+          <textarea class="form-control" name="message" rows="8" placeholder="Message" required></textarea>
+        </div>
+
+        <div class="text-center"><button class="btn-submit theme-btn btn-style-two" type="submit">Send Message</button></div>
+      </form>
+                </div><!--COntact Form-->
+
+            </div>
+
+        </div>
+    </div>
+</section>
+
+{% endblock %}

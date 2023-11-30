@@ -1,0 +1,734 @@
+{% extends 'layouts.html' %}
+{% load static %}
+{% block title %}
+Home
+{% endblock %}
+
+{% block style %}
+
+<style media="screen">
+  .alert-info {
+  color: #6ac610;
+  background-color: #121212;
+  border-color: #6ac610;
+  text-align: center;
+  font-size: 1.2rem;
+  }
+  .value {
+  font-size: 2rem;
+  display: block;
+  font-weight: 600;
+  color: #000;
+}
+  @media (max-width: 570px){
+  .col-xs-121 {
+width: 50%;
+}
+}
+</style>
+{% endblock %}
+
+
+{% block content %}
+
+{% if messages %}
+
+{% for message in messages %}
+<div class="alert alert-info">
+    {{ message }}
+</div>
+{% endfor %}
+
+{% endif %}
+
+<!--Main Slider-->
+<section class="main-slider revolution-slider">
+
+    <div class="tp-banner-container">
+        <div class="tp-banner">
+            <ul>
+
+                <li data-transition="fade" data-slotamount="1" data-masterspeed="1000" data-thumb="{% static 'images/main-slider/slider1.jpg'%} "  data-saveperformance="off"  data-title="">
+                <img src="{% static 'images/main-slider/slider1.jpg'%} "  alt=""  data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat">
+
+
+                <div class="tp-caption sfl sfb tp-resizeme"
+                data-x="left" data-hoffset="15"
+                data-y="center" data-voffset="-150"
+                data-speed="1500"
+                data-start="500"
+                data-easing="easeOutExpo"
+                data-splitin="none"
+                data-splitout="none"
+                data-elementdelay="0.01"
+                data-endelementdelay="0.3"
+                data-endspeed="1200"
+                data-endeasing="Power4.easeIn"><div class="">0<sub>2</sub></div></div>
+
+                <div class="tp-caption sfr sfb tp-resizeme"
+                data-x="left" data-hoffset="90"
+                data-y="center" data-voffset="-50"
+                data-speed="1500"
+                data-start="1000"
+                data-easing="easeOutExpo"
+                data-splitin="none"
+                data-splitout="none"
+                data-elementdelay="0.01"
+                data-endelementdelay="0.3"
+                data-endspeed="1200"
+                data-endeasing="Power4.easeIn"><h1><span class="normal-font"></span> SAVTHEARTH</h1></div>
+
+                <div class="tp-caption sfl sfb tp-resizeme"
+                data-x="left" data-hoffset="90"
+                data-y="center" data-voffset="40"
+                data-speed="1500"
+                data-start="1500"
+                data-easing="easeOutExpo"
+                data-splitin="none"
+                data-splitout="none"
+                data-elementdelay="0.01"
+                data-endelementdelay="0.3"
+                data-endspeed="1200"
+                data-endeasing="Power4.easeIn"><h3 class="bg-color">Raising Awareness About The Importance of Taking Action</h3></div>
+
+                <div class="tp-caption sfl sfb tp-resizeme"
+                data-x="left" data-hoffset="90"
+                data-y="center" data-voffset="110"
+                data-speed="1500"
+                data-start="2000"
+                data-easing="easeOutExpo"
+                data-splitin="none"
+                data-splitout="none"
+                data-elementdelay="0.01"
+                data-endelementdelay="0.3"
+                data-endspeed="1200"
+                data-endeasing="Power4.easeIn"><div class="text"><br>Despite attempts in recent decades to tackle environmental problems, our <br> Mother Earth is currently facing a plethora of concerns.<br> It needs to be protected and we all need to take action for it.</div></div>
+
+                <div class="tp-caption sfr sfb tp-resizeme"
+                data-x="left" data-hoffset="90"
+                data-y="center" data-voffset="190"
+                data-speed="1500"
+                data-start="2000"
+                data-easing="easeOutExpo"
+                data-splitin="none"
+                data-splitout="none"
+                data-elementdelay="0.01"
+                data-endelementdelay="0.3"
+                data-endspeed="1200"
+                data-endeasing="Power4.easeIn"></div>
+
+                </li>
+
+                <li data-transition="slidedown" data-slotamount="1" data-masterspeed="1000" data-thumb="{% static 'images/slider1.jpeg'%} "  data-saveperformance="off"  data-title="">
+                <img src="{% static 'images/slider1.jpeg'%}"  alt=""  data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat">
+
+
+                <div class="tp-caption sfl sfb tp-resizeme"
+                data-x="center" data-hoffset="0"
+                data-y="center" data-voffset="-120"
+                data-speed="1500"
+                data-start="500"
+                data-easing="easeOutExpo"
+                data-splitin="none"
+                data-splitout="none"
+                data-elementdelay="0.01"
+                data-endelementdelay="0.3"
+                data-endspeed="1200"
+                data-endeasing="Power4.easeIn"><h2 class="normal-font"></h2></div>
+
+                <div class="tp-caption sfr sfb tp-resizeme"
+                data-x="center" data-hoffset="0"
+                data-y="center" data-voffset="-30"
+                data-speed="1500"
+                data-start="1000"
+                data-easing="easeOutExpo"
+                data-splitin="none"
+                data-splitout="none"
+                data-elementdelay="0.01"
+                data-endelementdelay="0.3"
+                data-endspeed="1200"
+                data-endeasing="Power4.easeIn"><h2>Protecting The Planet</h2></div>
+
+                <div class="tp-caption sfl sfb tp-resizeme"
+                data-x="center" data-hoffset="0"
+                data-y="center" data-voffset="50"
+                data-speed="1500"
+                data-start="1500"
+                data-easing="easeOutExpo"
+                data-splitin="none"
+                data-splitout="none"
+                data-elementdelay="0.01"
+                data-endelementdelay="0.3"
+                data-endspeed="1200"
+                data-endeasing="Power4.easeIn"><h4>Join hands with us and contribute to protect your planet.</h4></div>
+
+                <div class="tp-caption sfr sfb tp-resizeme"
+                data-x="center" data-hoffset="0"
+                data-y="center" data-voffset="120"
+                data-speed="1500"
+                data-start="2000"
+                data-easing="easeOutExpo"
+                data-splitin="none"
+                data-splitout="none"
+                data-elementdelay="0.01"
+                data-endelementdelay="0.3"
+                data-endspeed="1200"
+                data-endeasing="Power4.easeIn"></div>
+
+                </li>
+
+
+
+
+            </ul>
+
+        </div>
+    </div>
+</section>
+
+
+<!--Main Features-->
+<section class="main-features">
+  <div class="auto-container">
+      <div class="title-box text-center">
+          <h1>1,25,000+</h1>
+          <h2>Students Enrolled</h2>
+            <div class="text">In 2019, we reached these students in 9 different cities across India in collaboration with the Rotary Club of Delhi Elite.</div>
+        </div>
+
+        <div class="row clearfix">
+
+            <!--Feature Column-->
+            <div class="features-column col-lg-3 col-md-6 col-xs-12 col-xs-121">
+              <article class="inner-box">
+                  <div class="icon-box">
+                      <div class="icon"><span class="flaticon-paper"></span></div>
+                        <h3 class="title">OFFLINE OLYMPIAD</h3>
+                    </div>
+                </article>
+            </div>
+
+            <!--Feature Column-->
+            <div class="features-column col-lg-3 col-md-6 col-xs-12 col-xs-121">
+              <article class="inner-box">
+                  <div class="icon-box">
+                      <div class="icon"><span class="flaticon-technology"></span></div>
+                        <h3 class="title">ONLINE OLYMPIAD</h3>
+                    </div>
+                </article>
+            </div>
+
+            <!--Feature Column-->
+            <div class="features-column col-lg-3 col-md-6 col-xs-12 col-xs-121">
+              <article class="inner-box">
+                  <div class="icon-box">
+                      <div class="icon"><span class="flaticon-paper-2"></span></div>
+                        <h3 class="title">MAGAZINE</h3>
+                    </div>
+                </article>
+            </div>
+
+            <!--Feature Column-->
+            <div class="features-column col-lg-3 col-md-6 col-xs-12 col-xs-121">
+              <article class="inner-box">
+                  <div class="icon-box">
+                      <div class="icon"><span class="flaticon-internet"></span></div>
+                        <h3 class="title">CSR STRATEGIZING</h3>
+                    </div>
+                </article>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!--Featured Fluid Section-->
+<section class="featured-fluid-section">
+
+
+  <div class="outer clearfix">
+
+        <!--Image Column-->
+        <div class="image-column" style="background-image:url(/static/images/magazine10.jpeg);"></div>
+
+        <!--Text Column-->
+        <article class="column text-column dark-column wow fadeInRight" data-wow-delay="0ms" data-wow-duration="1500ms">
+
+            <div class="content-box pull-left">
+                <h2>E <span class="theme_color"> - MAGAZINE</span> </h2>
+              <div class="title-text">Education and information centric magazine for all age groups</div>
+                <div class="text">We will soon be releasing the e-copy of our first magazine. Subscribe on this website to be the first one to receive our magazine notification.
+</div>
+                <a href="#subscribe" class="theme-btn btn-style-one">Subscribe</a>
+                <!-- <a href="#" class="theme-btn btn-style-two">View details</a> -->
+
+            </div>
+
+
+            <div class="clearfix"></div>
+        </article>
+
+    </div>
+
+</section>
+
+
+<!--Recent Projects Section-->
+<!-- <section class="recent-projects">
+  <div class="auto-container">
+
+        <div class="sec-title clearfix">
+          <div class="pull-left">
+                <h2>RECENT <span class="normal-font theme_color">Project</span></h2>
+                <div class="text">Lorem ipsum dolor sit amet, cum at inani interesset, nisl fugit munere ad mel,vix an omnium dolor amet </div>
+            </div>
+            <div class="pull-right padd-top-30">
+              <a href="#" class="theme-btn btn-style-three">See All Projects</a>
+            </div>
+        </div>
+      <div class="row clearfix"> -->
+
+
+            <!-- <div class="column default-featured-column col-md-3 col-sm-6 col-xs-12">
+              <article class="inner-box wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="1500ms">
+                <figure class="image-box">
+                      <a href="#"><img src="{% static 'images/resource/featured-image-1.jpg'%} " alt=""></a>
+                    </figure>
+                    <div class="content-box">
+                      <h3><a href="#">Project Name</a></h3>
+                        <div class="column-info">Environment, Go Green Company</div>
+                        <div class="text">Lorem ipsum dolor sit amet et siu amet amet audiam copiosaei mei purto dolor timeam mea ne.</div>
+                        <a href="#" class="theme-btn btn-style-three">Learn More</a>
+                    </div>
+                </article>
+            </div> -->
+
+
+            <!-- <div class="column default-featured-column col-md-3 col-sm-6 col-xs-12">
+              <article class="inner-box wow fadeInLeft" data-wow-delay="300ms" data-wow-duration="1500ms">
+                <figure class="image-box">
+                      <a href="#"><img src="{% static 'images/resource/featured-image-2.jpg'%}" alt=""></a>
+                    </figure>
+                    <div class="content-box">
+                      <h3><a href="#">Project Name</a></h3>
+                        <div class="column-info">Environment, Go Green Company</div>
+                        <div class="text">Lorem ipsum dolor sit amet et siu amet amet audiam copiosaei mei purto dolor timeam mea ne.</div>
+                        <a href="#" class="theme-btn btn-style-three">Learn More</a>
+                    </div>
+                </article>
+            </div> -->
+
+
+            <!-- <div class="column default-featured-column col-md-3 col-sm-6 col-xs-12">
+              <article class="inner-box wow fadeInLeft" data-wow-delay="600ms" data-wow-duration="1500ms">
+                <figure class="image-box">
+                      <a href="#"><img src="{% static 'images/resource/featured-image-3.jpg'%}" alt=""></a>
+                    </figure>
+                    <div class="content-box">
+                      <h3><a href="#">Project Name</a></h3>
+                        <div class="column-info">Environment, Go Green Company</div>
+                        <div class="text">Lorem ipsum dolor sit amet et siu amet amet audiam copiosaei mei purto dolor timeam mea ne.</div>
+                        <a href="#" class="theme-btn btn-style-three">Learn More</a>
+                    </div>
+                </article>
+            </div> -->
+
+
+            <!-- <div class="column default-featured-column col-md-3 col-sm-6 col-xs-12">
+              <article class="inner-box wow fadeInLeft" data-wow-delay="900ms" data-wow-duration="1500ms">
+                <figure class="image-box">
+                      <a href="#"><img src="{% static 'images/resource/featured-image-4.jpg'%}" alt=""></a>
+                    </figure>
+                    <div class="content-box">
+                      <h3><a href="#">Project Name</a></h3>
+                        <div class="column-info">Environment, Go Green Company</div>
+                        <div class="text">Lorem ipsum dolor sit amet et siu amet amet audiam copiosaei mei purto dolor timeam mea ne.</div>
+                        <a href="#" class="theme-btn btn-style-three">Learn More</a>
+                    </div>
+                </article>
+            </div>
+
+        </div>
+    </div>
+</section> -->
+
+
+<!--Two Column Fluid -->
+
+<!--Events Section-->
+<!-- <section class="events-section latest-events">
+  <div class="auto-container">
+
+        <div class="sec-title text-center">
+            <h2>Latest <span class="normal-font theme_color">Event</span></h2>
+            <div class="text">Lorem ipsum dolor sit amet, cum at inani interes setnisl omnium dolor amet amet qco modo cum text </div>
+        </div>
+      <div class="row clearfix">
+
+
+            <div class="column default-featured-column style-two col-lg-4 col-md-6 col-sm-6 col-xs-12">
+              <article class="inner-box">
+                <figure class="image-box">
+                      <a href="#"><img src="{% static 'images/resource/featured-image-5.jpg'%} " alt=""></a>
+                        <div class="post-tag">Featured</div>
+                    </figure>
+                    <div class="content-box">
+                      <h3><a href="#">One Tree Thousand Hope</a></h3>
+                        <div class="column-info">13-14 Feb in Sanfransico, CA</div>
+                        <div class="text">Lorem ipsum dolor sit amet, eu qui modo expeten dis reformidans, ex sit appetere sententiae.. </div>
+                        <a href="#" class="theme-btn btn-style-three">Read More</a>
+                    </div>
+                </article>
+            </div>
+
+
+            <div class="column default-featured-column style-two col-lg-4 col-md-6 col-sm-6 col-xs-12">
+              <article class="inner-box">
+                <figure class="image-box">
+                      <a href="#"><img src="{% static 'images/resource/featured-image-6.jpg'%} " alt=""></a>
+                    </figure>
+                    <div class="content-box">
+                      <h3><a href="#">One Tree Thousand Hope</a></h3>
+                        <div class="column-info">13-14 Feb in Sanfransico, CA</div>
+                        <div class="text">Lorem ipsum dolor sit amet, eu qui modo expeten dis reformidans, ex sit appetere sententiae.. </div>
+                        <a href="#" class="theme-btn btn-style-three">Read More</a>
+                    </div>
+                </article>
+            </div>
+
+            <div class="column default-featured-column links-column col-lg-4 col-md-6 col-sm-6 col-xs-12">
+              <article class="inner-box">
+                <div class="vertical-links-outer">
+                      <div class="link-block">
+                          <div class="default inner"><figure class="image-thumb"><img src="{% static 'images/resource/post-thumb-1.jpg'%}" alt=""></figure><strong>Togather we can change the</strong><span class="desc">Lorem ipsum dolor sit amet et siu amet sio audiam si copiosaei mei purto </span></div>
+                            <a href="#" class="alternate"><strong>Togather we can change the</strong><span class="desc">Lorem ipsum dolor sit amet et siu amet sio audiam si copiosaei mei purto </span></a>
+                        </div>
+
+                        <div class="link-block">
+                          <div class="default inner"><figure class="image-thumb"><img src="{% static 'images/resource/post-thumb-1.jpg'%}" alt=""></figure><strong>Urgent Clothe Needed</strong><span class="desc">Lorem ipsum dolor sit amet et siu amet sio audiam si copiosaei mei purto </span></div>
+                           <a href="#" class="alternate"><strong>Urgent Clothe Needed</strong><span class="desc">Lorem ipsum dolor sit amet et siu amet sio audiam si copiosaei mei purto </span></a>
+                        </div>
+
+                        <div class="link-block">
+                          <div class="default inner"><figure class="image-thumb"><img src="{% static 'images/resource/post-thumb-1.jpg'%}" alt=""></figure><strong>Let’s plant 200 tree each...</strong><span class="desc">Lorem ipsum dolor sit amet et siu amet sio audiam si copiosaei mei purto </span></div>
+                            <a href="#" class="alternate"><strong>Let’s plant 200 tree each...</strong><span class="desc">Lorem ipsum dolor sit amet et siu amet sio audiam si copiosaei mei purto </span></a>
+                        </div>
+
+                        <div class="link-block">
+                          <div class="default inner"><figure class="image-thumb"><img src="{% static 'images/resource/post-thumb-1.jpg'%}" alt=""></figure><strong>Keep your house envirome..</strong><span class="desc">Lorem ipsum dolor sit amet et siu amet sio audiam si copiosaei mei purto </span></div>
+                            <a href="#" class="alternate"><strong>Keep your house envirome..</strong><span class="desc">Lorem ipsum dolor sit amet et siu amet sio audiam si copiosaei mei purto </span></a>
+                        </div>
+
+                    </div>
+                </article>
+            </div>
+
+
+        </div>
+    </div>
+</section> -->
+
+
+
+
+<!--Testimonials-->
+<section class="testimonials-section" style="background-image:url(/static/images/test2.jpg);">
+<div class="auto-container">
+
+        <div class="sec-title text-center">
+            <h2>Testi<span class="normal-font theme_color">Monials</span></h2>
+            <div class="text">Every piece of feedback is critical to us. Here are some genuine responses from our colleagues. </div>
+        </div>
+
+        <!--Slider-->
+      <div class="testimonials-slider testimonials-carousel">
+
+            <!--Slide-->
+            <article class="slide-item">
+
+                <div class="info-box">
+                  <figure class="image-box"><img src="{% static 'images/1.jpeg'%} " alt=""></figure>
+                  <h3>Ranjana Bajaj</h3>
+                    <p class="designation">Principal</p>
+                </div>
+
+                <div class="slide-text">
+                    <p>“Our school is always enlightened to have such kind of tests for our students. This test about the environment was extremely educational. I am sure this action will enhance their awareness.”</p>
+                </div>
+            </article>
+
+            <!--Slide-->
+            <article class="slide-item">
+
+                <div class="info-box">
+                  <figure class="image-box"><img src="{% static 'images/2.jpeg'%}" alt=""></figure>
+                  <h3>Khushi</h3>
+                    <p class="designation">Student</p>
+                </div>
+
+                <div class="slide-text">
+                    <p>“The test was very nice and easy. I was curious when I got to know that the topic of this is “Environment”, I have a keen interest in that topic . Got to learn a lot about our environment by this test.”</p>
+                </div>
+            </article>
+
+            <!--Slide-->
+            <article class="slide-item">
+
+                <div class="info-box">
+                  <figure class="image-box"><img src="{% static 'images/4.jpeg'%}" alt=""></figure>
+                  <h3>Hasan</h3>
+                    <p class="designation">CMS Head office</p>
+                </div>
+
+                <div class="slide-text">
+                    <p>“ It was an effective medium to let students know the importance of our environment and test their knowledge about the environment, I am glad that each student attempted this test very keenly.”</p>
+                </div>
+            </article>
+
+            <!--Slide-->
+            <article class="slide-item">
+
+                <div class="info-box">
+                  <figure class="image-box"><img src="{% static 'images/3.jpeg'%}" alt=""></figure>
+                  <h3>Ishaan</h3>
+                    <p class="designation">Student</p>
+                </div>
+
+                <div class="slide-text">
+                    <p>“This was very unique, usually exams are conducted on subject topics but this one was an informative and interesting topic to attempt a test on. Excitingly looking forward for more such tests.”</p>
+                </div>
+            </article>
+
+            <!--Slide-->
+            <article class="slide-item">
+
+                <div class="info-box">
+                  <figure class="image-box"><img src="{% static 'images/1.jpeg'%}" alt=""></figure>
+                  <h3>Shreya Singh</h3>
+                    <p class="designation">Parent of Khushi</p>
+                </div>
+
+                <div class="slide-text">
+                    <p>“I am glad that my child got the opportunity to appear for this test and got to enhance his knowledge about the environment. I  would definitely encourage my child to appear for more such tests.”</p>
+                </div>
+            </article>
+
+
+        </div>
+
+    </div>
+</section>
+
+
+<section class="two-column-fluid">
+
+
+  <div class="outer clearfix">
+
+
+        <article class="column left-column" style="">
+
+            <div class="content-box pull-right">
+                <h2>Some <span class="normal-font theme_color">Facts</span></h2>
+                <div class="title-text"></div>
+                <div class="text">SAVTHEARTH was founded in Delhi in 2019. In just 9 months, it had expanded to nearly ten cities. We have developed a more comprehensive plan and schedule for schools and their students to follow. They can even obtain various levels of certification. </div>
+                <br>
+
+                <div class="clearfix">
+                  <div class="icon-box">
+                      <div class="icon"><span class="flaticon-building"></span></div>
+                        <div class="lower-box">
+                          <div class="value" akhi="300">0</div>
+                            <span class="title">Schools</span>
+                        </div>
+                    </div>
+
+                    <div class="icon-box">
+                      <div class="icon"><span class="flaticon-tool-4"></span></div>
+                        <div class="lower-box">
+                          <div class="value" akhi="125000">0</div>
+                            <span class="title">Students</span>
+                        </div>
+                    </div>
+
+                    <div class="icon-box">
+                      <div class="icon"><span class="flaticon-construction"></span></div>
+                        <div class="lower-box">
+                          <div class="value" akhi="10">0</div>
+                            <span class="title">Cities</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="clearfix"></div>
+        </article>
+
+        <article class="column right-column" style="">
+
+            <div class="content-box pull-left">
+              <div class="outer-box">
+                  <div class="quote-icon"><span class="fa fa-quote-left"></span></div>
+                    <h2>Word from <span class="normal-font">FOUNDER</span></h2>
+
+                    <!--Text Content-->
+                    <div class="text-content">
+                        <div class="text"><p>The environment is a sensitive topic just like any other social issue. Small changes can bring a very big difference but essentially we will have to bring a change in our lifestyles. We have included schools in the process because any significant change will necessitate the participation of youth.   </p></div>
+                        <div class="information clearfix">
+                            <div class="info">
+                              <figure class="image-thumb"><img src="{% static 'images/resource/kabir1.jpeg'%} " alt=""></figure>
+                              <h3>Kabir Bansal</h3>
+                                <p>Co-Founder</p>
+                            </div>
+                            <!-- <div class="signature"><img src="{% static 'images/anmol.jpeg'%} " alt=""></div> -->
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="clearfix"></div>
+        </article>
+
+    </div>
+
+</section>
+
+
+
+<!--Blog News Section-->
+<section class="blog-news-section latest-news">
+  <div class="auto-container">
+
+        <div class="sec-title text-center">
+            <h2>Latest <span class="normal-font theme_color">News</span></h2>
+            <div class="text">Our Earth is affected by human interference all across the globe. This is what is happening all over the world. </div>
+        </div>
+      <div class="row clearfix">
+
+            <!--News Column-->
+            <div class="column blog-news-column col-lg-4 col-md-6 col-sm-6 col-xs-12">
+              <article class="inner-box wow fadeInUp" data-wow-delay="0ms" data-wow-duration="1500ms">
+                <figure class="image-box">
+                      <a target="_blank" href="https://www.gulftoday.ae/news/2023/02/23/magnitude-7-2-earthquake-strikes-tajikistan-near-border-with-china"><img src="https://akm-img-a-in.tosshub.com/businesstoday/images/story/202302/ezgif-sixteen_nine_295.jpg?size=948:533" alt=""></a>
+                        <div class="news-date">24<span class="month">FEB</span></div>
+                    </figure>
+                    <div class="content-box">
+                      <h3><a target="_blank" href="https://www.gulftoday.ae/news/2023/02/23/magnitude-7-2-earthquake-strikes-tajikistan-near-border-with-china">Magnitude 7.2 earthquake strikes Tajikistan, near border with China</a></h3>
+                      <div class="post-info clearfix">
+                          <div class="post-author"></div>
+                            <div class="post-options clearfix">
+                              <!-- <a href="#" class="comments-count"><span class="icon flaticon-communication-2"></span> 6</a>
+                                <a href="#" class="fav-count"><span class="icon flaticon-favorite-1"></span> 14</a> -->
+                            </div>
+                        </div>
+                        <div class="text">An earthquake of about 7.2 magnitude shook Tajikistan at 8:37am (0037 GMT) on Thursday at a depth of 10 km (6 miles), Chinese state television CCTV reported，citing the China earthquake Networks Center.....
+</div>
+                        <a target="_blank" href="https://www.gulftoday.ae/news/2023/02/23/magnitude-7-2-earthquake-strikes-tajikistan-near-border-with-china" class="theme-btn read-more">Read More</a>
+                    </div>
+                </article>
+            </div>
+
+            <!--News Column-->
+            <div class="column blog-news-column col-lg-4 col-md-6 col-sm-6 col-xs-12">
+              <article class="inner-box wow fadeInUp" data-wow-delay="300ms" data-wow-duration="1500ms">
+                <figure class="image-box">
+                      <a target="_blank" href="https://www.thestatesman.com/world/five-cities-most-vulnerable-to-natural-disasters-1503156928.html"><img src="https://i.natgeofe.com/n/24885774-fa8e-4c01-ac1d-d5f460ed3e81/GettyImages-1242750214_16x9.jpg" alt=""></a>
+                        <div class="news-date">23<span class="month">FEB</span></div>
+                    </figure>
+                    <div class="content-box">
+                      <h3><a target="_blank" href="https://www.thestatesman.com/world/five-cities-most-vulnerable-to-natural-disasters-1503156928.html">Five cities most vulnerable to natural disasters
+</a></h3>
+                      <div class="post-info clearfix">
+                          <div class="post-author"></div>
+                            <div class="post-options clearfix">
+                              <!-- <a href="#" class="comments-count"><span class="icon flaticon-communication-2"></span> 6</a>
+                                <a href="#" class="fav-count"><span class="icon flaticon-favorite-1"></span> 14</a> -->
+                            </div>
+                        </div>
+                        <div class="text">Unfortunately natural calamities are happening more frequently now than ever before. A majority of the cities that are at risk are located in coastal regions, making them more susceptible to earthquakes, tsunamis, and floods....
+</div>
+                        <a target="_blank" href="https://www.thestatesman.com/world/five-cities-most-vulnerable-to-natural-disasters-1503156928.html" class="theme-btn read-more">Read More</a>
+                    </div>
+                </article>
+            </div>
+
+            <!--News Column-->
+            <div class="column blog-news-column col-lg-4 col-md-6 col-sm-6 col-xs-12">
+              <article class="inner-box wow fadeInUp" data-wow-delay="600ms" data-wow-duration="1500ms">
+                <figure class="image-box">
+                      <a target="_blank" href="https://www.thedailystar.net/environment/news/warm-water-eroding-doomsday-glacier-study-shows-3249381"><img src="https://images.ctfassets.net/cnu0m8re1exe/5FcM2B1o4CcSKUL7htFoIh/afcd5fab323daa93b00a2f76782bd6bb/Thwaits_Glacier.jpg" alt=""></a>
+                        <div class="news-date">16<span class="month">FEB</span></div>
+                    </figure>
+                    <div class="content-box">
+                      <h3><a target="_blank" href="https://www.thedailystar.net/environment/news/warm-water-eroding-doomsday-glacier-study-shows-3249381">Warm water eroding 'Doomsday Glacier', study shows</a></h3>
+                      <div class="post-info clearfix">
+                          <div class="post-author"></div>
+                            <div class="post-options clearfix">
+                              <!-- <a href="#" class="comments-count"><span class="icon flaticon-communication-2"></span> 6</a>
+                                <a href="#" class="fav-count"><span class="icon flaticon-favorite-1"></span> 14</a> -->
+                            </div>
+                        </div>
+                        <div class="text">Warm water is seeping into the weak points of Antarctica's giant Thwaites Glacier, exacerbating melting caused by rising temperatures, two papers published in Nature journal showed on Wednesday...</div>
+                        <a target="_blank" href="https://www.thedailystar.net/environment/news/warm-water-eroding-doomsday-glacier-study-shows-3249381" class="theme-btn read-more">Read More</a>
+                    </div>
+                </article>
+            </div>
+
+
+        </div>
+    </div>
+</section>
+
+
+<!--Sponsors Section-->
+<section class="sponsors-section">
+    <div class="auto-container">
+        <div class="slider-outer">
+            <!--Sponsors Slider-->
+            <ul class="sponsors-slider">
+                <li><a href="#"><img src="{% static 'images/clients/ss1.jpeg'%} " alt=""></a></li>
+                <li><a href="#"><img src="{% static 'images/clients/ss2.jpeg'%}" alt=""></a></li>
+                <li><a href="#"><img src="{% static 'images/clients/ss3.jpeg'%}" alt=""></a></li>
+                <li><a href="#"><img src="{% static 'images/clients/ss4.jpeg'%}" alt=""></a></li>
+                <li><a href="#"><img src="{% static 'images/clients/ss5.jpeg'%}" alt=""></a></li>
+                <li><a href="#"><img src="{% static 'images/clients/ss6.jpeg'%}" alt=""></a></li>
+            </ul>
+        </div>
+
+    </div>
+</section>
+
+
+
+{% endblock %}
+{% block js %}
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script> 
+<script> 
+     const counters = document.querySelectorAll('.value');
+const speed = 1000;
+
+counters.forEach( counter => {
+   const animate = () => {
+      const value = +counter.getAttribute('akhi');
+      const data = +counter.innerText;
+     
+      const time = value / speed;
+     if(data < value) {
+          counter.innerText = Math.ceil(data + time);
+          setTimeout(animate, 1);
+        }else{
+          counter.innerText = value;
+        }
+     
+   }
+   
+   animate();
+});
+
+
+
+
+</script> 
+{% endblock %}

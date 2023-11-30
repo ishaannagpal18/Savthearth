@@ -1,0 +1,151 @@
+{% extends 'layouts.html' %}
+{% load static %}
+{% block title %}
+Services
+{% endblock %}
+
+{% block content %}
+
+<!--Page Title-->
+<section class="page-title" style="background-image:url(/static/images/background/bg.jpeg);">
+  <div class="auto-container">
+      <div class="sec-title">
+            <h1>Our <span class="normal-font">Services</span></h1>
+            <div class="bread-crumb"><a href="{% url 'home'%}">Home</a> / <a href="#" class="current">Services</a></div>
+        </div>
+    </div>
+</section>
+
+
+<!--Main Features-->
+<section class="main-features">
+  <div class="auto-container">
+      <div class="title-box text-center">
+          <h1>1,25,000+</h1>
+          <h2>Students Enrolled</h2>
+            <div class="text">In 2019, we reached these students in 9 different cities across India in collaboration with the Rotary Club of Delhi Elite.</div>
+        </div>
+
+        <div class="row clearfix">
+
+            <!--Feature Column-->
+            <div class="features-column col-lg-3 col-md-6 col-xs-12">
+              <article class="inner-box">
+                  <div class="icon-box">
+                      <div class="icon"><span class="flaticon-paper"></span></div>
+                        <h3 class="title">OFFLINE OLYMPIAD</h3>
+                    </div>
+                </article>
+            </div>
+
+            <!--Feature Column-->
+            <div class="features-column col-lg-3 col-md-6 col-xs-12">
+              <article class="inner-box">
+                  <div class="icon-box">
+                      <div class="icon"><span class="flaticon-technology"></span></div>
+                        <h3 class="title">ONLINE OLYMPIAD</h3>
+                    </div>
+                </article>
+            </div>
+
+            <!--Feature Column-->
+            <div class="features-column col-lg-3 col-md-6 col-xs-12">
+              <article class="inner-box">
+                  <div class="icon-box">
+                      <div class="icon"><span class="flaticon-paper-2"></span></div>
+                        <h3 class="title">MAGAZINE</h3>
+                    </div>
+                </article>
+            </div>
+
+            <!--Feature Column-->
+            <div class="features-column col-lg-3 col-md-6 col-xs-12">
+              <article class="inner-box">
+                  <div class="icon-box">
+                      <div class="icon"><span class="flaticon-internet"></span></div>
+                        <h3 class="title">CSR STRATEGIZING</h3>
+                    </div>
+                </article>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!--Default Section-->
+<section class="default-section">
+  <div class="auto-container">
+      <div class="row clearfix">
+
+            <!--Column-->
+            <div class="column image-column col-md-6 col-sm-12 col-xs-12">
+              <article class="inner-box wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="1500ms">
+                <figure class="image-box video-box">
+                      <img style="height: 60vh; " src="{% static 'images/ab.png'%} " alt="">
+                        <a href="https://youtu.be/s-9eDCEYAHk" class="lightbox-image video-link"><div class="icon-outer"><span class="img-circle fa fa-play"></span></div></a>
+                    </figure>
+                </article>
+            </div>
+
+            <!--Column-->
+            <div class="column default-text-column with-margin col-md-6 col-sm-12 col-xs-12">
+              <article class="inner-box wow fadeInRight" data-wow-delay="0ms" data-wow-duration="1500ms">
+                <h2>National Level Olympiad <span class="theme_color normal-font">SAVTHEARTH</span></h2>
+                <div class="bigger-text">An initiative to educate and inform our youth about the environment.</div>
+                <div class="text"><p>Savthearth is about raising awareness among school students about the importance of protecting our planet and taking action. We hope to sensitize our youth to make the aware of the environmental situation.  </p></div>
+                    <ul class="styled-list-one no-margin-bottom">
+                      <li>Online Olympiad</li>
+                        <li>Offline Olympiad </li>
+                        <li>Magazine</li>
+                        <li>CSR Strategizing</li>
+                    </ul>
+                </article>
+            </div>
+
+        </div>
+
+        <div class="row clearfix">
+
+            <!--Column-->
+            <div class="column default-text-column col-md-4 col-sm-6 col-xs-12">
+              <div class="text-block">
+                  <h3>Our Aim</h3>
+                    <div class="text no-margin-bottom">
+                      <p>The main goal of Savthearth has been to provide genuine educational information to youth in order to raise their level of awareness and teach them about the environment from a young age. It has organized several activities to improve the environmental quality of our planet.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!--Column-->
+            <div class="column default-text-column col-md-4 col-sm-6 col-xs-12">
+              <div class="text-block">
+                  <h3>CORE <span class="theme_color">VALUES</span></h3>
+                    <div class="text no-margin-bottom">
+                      <ul style="list-style-type: circle;">
+                        <li><i style="color:#121212" class="fa fa-arrow-right"></i>   Initiative to plant more trees </li>
+                        <li><i style="color:#121212" class="fa fa-arrow-right"></i>   Easy reduction of energy  </li>
+                        <li><i style="color:#121212" class="fa fa-arrow-right"></i>   Recycling the waste </li>
+                        <li><i style="color:#121212" class="fa fa-arrow-right"></i>   Conservation of water  </li>
+                        <li><i style="color:#121212" class="fa fa-arrow-right"></i>   Wise disposal of E-waste</li>
+                      </ul>
+                      <p></p>
+                    </div>
+                </div>
+            </div>
+
+            <!--Column-->
+            <div class="column default-text-column col-md-4 col-sm-6 col-xs-12">
+              <div class="text-block">
+                  <h3>Our Vision</h3>
+                    <div class="text no-margin-bottom">
+                      <p>We want to see a better, healthy and green tomorrow by transforming the future of the global environment. We aim to do so by sustainably and efficiently conserving, developing and utilizing natural resources. </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+{% endblock %}

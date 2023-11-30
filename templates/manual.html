@@ -1,0 +1,30 @@
+{% extends 'layouts.html' %}
+{% load static %}
+{% block title %}
+Student Manual
+{% endblock %}
+{% block style %}
+<style media="screen">
+  .pdf{
+    width:50%;
+  }
+  @media (max-width: 570px){
+    .pdf{
+      width:90%;
+    }
+  }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="padding padding2">
+  <div class="container">
+    <center>
+      <div class="download">
+        <a href="{% static 'images/school1.pdf'%}" download><button type="button" class="btn btn-outline-warning download1">Download <i class="fas fa-download"></i></button></a>
+      </div>
+    <embed class="pdf"  type="application/pdf" src="{% static 'images/school1.pdf'%}"  height="600">
+  </div>
+</div>
+
+{% endblock %}

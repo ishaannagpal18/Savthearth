@@ -1,0 +1,111 @@
+{% extends "layouts.html"%}
+{% load static %}
+{% load crispy_forms_tags %}
+{% block title %}
+Instructions
+{% endblock %}
+{% block style %}
+<link href="{% static 'css/instruction.css'%} " rel="stylesheet">
+<link href="{% static 'css/style1.css'%} " rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Oleo+Script&display=swap" rel="stylesheet">
+{% endblock %}
+{% block content %}
+<section id=instruction>
+  <u><h1 class="inst-h1">EXAM INSTRUCTIONS</h1></u>
+
+  <form class="container">
+    <div class="wrapper">
+      <!-- First checkbox is checked because you want the first conatiner to be seen -->
+      <input type="checkbox" id="firstStep" name="toggler" checked>
+       <div class="content">
+        <label for="secondStep">Next</label>
+
+        <h1>General Instructions</h1>
+        <ol type="1" >
+          <li> The examination will comprise of objective type Multiple Choice Questions (MCQs).</li>
+          <li> All questions are compulsory and each carries One mark.</li>
+          <li> There is no negative marking for the wrong answers.</li>
+          <li> Once disqualified, you will not be eligible to appear for the savthearth quiz in the future run.</li>
+          <li> The examination does not require using any paper, pen, pencil and calculator.</li>
+          <li> Your desk/tables must be clear or any materials except your test-taking device.</li>
+        </ol>
+      </div>
+      <div class="step first"></div>
+
+    </div>
+
+    <div class="wrapper">
+       <input type="checkbox" id="secondStep" name="toggler">
+       <div class="content">
+        <label for="thirdStep">Next</label>
+        <h1>Technical Instructions</h1>
+        <ol>
+          <li> Switching tabs in between is strictly prohibited. After <b>10 WARNINGS</b> you will be disqualified to appear for the test.</li>
+          <li> You must use a functioning webcam and microphone.</li>
+          <li> Turning on the camera is mandatory. The exam will be cancelled if you leave in between. The time limit is 30 mins for completing the exam.</li>
+          <li> You are allowed to submit only once, make sure that you have correctly attempted all the questions before submission. </li>
+          <li> The remaining time is shown in the Right Top Corner of the screen. It is mandatory to complete the test in time.</li>
+          <li> Click on the submit button after completing the test to get the correct score.</li>
+          <li> Do not leave the test in between. It will lead to cancellation of the test and you will have to restart the same.</li>
+          <li> Do not reload the page, as it will lead to cancellation of exam.</li>
+
+        </ol>
+      </div>
+      <div class="step second" />
+
+
+    </div>
+
+    <div class="wrapper">
+      <input type="checkbox" id="thirdStep" name="toggler" >
+      <div class="content">
+        <h2>System Requirements</h2>
+        <ol>
+        <li> Internet Bandwidth: The minimum required bandwidth is 1 Mbps of internet speed on each machine.</li>
+        <li> Device must have a working webcam and microphone.</li>
+        <li> If your internet disconnects during submission of answer sheet, contact the Help Center on the given number and don't close your window.</li>
+        <li> Make sure that pop‐up blocker is disabled on your browser. Any notifications related to antivirus, windows update, email notifications etc. will be counted as navigation from the examination window. Post the warning after crossing the 10 navigation count during the examination, the student will be considered for referring to UFM Prohibition Committee, if the candidate crosses 10 the case will be gone through the UFM.</li>
+        <li> Proctor can monitor the students all the time & at any time the proctor has an option to send a warning message to the student for any improper conduct.</li>
+        </ol>
+         <input type="reset">
+      </div>
+      <div class="step third" />
+
+    </div>
+  </form>
+
+
+
+</section>
+<section id="instruction1">
+  <div class="button">
+    {% if user.profile.test_attempted %}
+    <div class="row">
+      <div class="col-md-6">
+        <button ><a target="_blank" href="{% url 'quiz'%}">VIEW SCORE </a></button><br><br>
+      </div>
+      <!-- <div class="col-md-6">
+        <button><a target="_blank" href="{% url 'certificate'%}">CERTIFICATE </a></button>
+      </div> -->
+
+    </div>
+
+
+    {% else %}
+    <button><a target="_blank" href="{% url 'quiz'%}">START TEST </a></button>
+
+    {% endif %}
+  </div>
+</section>
+
+{% endblock %}
+
+{% block js %}
+<!-- <script type = "text/javascript" >
+          history.pushState(null, null, 'instruction');
+          window.addEventListener('popstate', function (event) {
+              history.pushState(null, null, 'instruction');
+      });
+
+     </script> -->
+{% endblock %}
